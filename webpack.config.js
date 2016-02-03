@@ -2,7 +2,7 @@ var path = require('path');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  plugins: [new CopyWebpackPlugin([{from: 'images', to: '../images'}])],
+  plugins: [new CopyWebpackPlugin([{from: 'images', to: '../images'}, {from: 'config', to: '../config'}])],
   entry: [
     path.normalize('es6-shim/es6-shim.min'),
     'reflect-metadata',

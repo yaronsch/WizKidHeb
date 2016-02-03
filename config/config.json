@@ -1,0 +1,78 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "title": "איות",
+      "data": {
+        "direction": "rtl",
+        "words": [
+          {
+            "name": "alligator",
+            "spelling": "תנין",
+            "image": "images/aligator.png"
+          },
+          {
+            "name": "balloon",
+            "spelling": "בלון",
+            "image": "images/baloon.png"
+          },
+          {
+            "name": "ball",
+            "spelling": "כדור",
+            "image": "images/basketball.png"
+          },
+          {
+            "name": "book",
+            "spelling": "ספר",
+            "image": "images/book.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "title": "חיבור"
+    }
+  ],
+  "themes": [
+    {
+      "clouds": {
+        "location": "images/themes/clouds"
+      }
+    }
+  ],
+  "letters": {
+    "א": "01",
+    "ב": "02",
+    "ג": "03",
+    "ד": "04",
+    "ה": "05",
+    "ו": "06",
+    "ז": "07",
+    "ח": "08",
+    "ט": "09",
+    "י": "10",
+    "כ": "11",
+    "ל": "12",
+    "מ": "13",
+    "נ": "14",
+    "ס": "15",
+    "ע": "16",
+    "פ": "17",
+    "צ": "18",
+    "ק": "19",
+    "ר": "20",
+    "ש": "21",
+    "ת": "22",
+    "ך": "23",
+    "ם": "24",
+    "ן": "25",
+    "ף": "26",
+    "ץ": "27",
+    "equals": "equal",
+    "plus": "addition",
+    "minus": "subtraction",
+    "mult": "multiplication",
+    "div": "division"
+  }
+}

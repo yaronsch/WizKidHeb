@@ -1,5 +1,6 @@
 import {App, Platform} from 'ionic-framework/ionic';
 import {HomePage} from './pages/home/home';
+import {DataService} from './services/data-service'
 
 // https://angular.io/docs/ts/latest/api/core/Type-interface.html
 import {Type} from 'angular2/core';
@@ -7,6 +8,7 @@ import {Type} from 'angular2/core';
 
 @App({
   template: '<ion-nav [root]="rootPage"></ion-nav>',
+  providers: [DataService],
   config: {} // http://ionicframework.com/docs/v2/api/config/Config/
 })
 export class MyApp {
