@@ -1,3 +1,5 @@
-<ion-content class="home">
-
+<ion-content class="home" *ngIf="dataService.data">
+    <ion-card *ngFor="#game of dataService.data.games" (click)="launchGame(game)">
+        {{game.title}}
+    </ion-card>
 </ion-content>

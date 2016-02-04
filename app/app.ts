@@ -9,7 +9,9 @@ import {Type} from 'angular2/core';
 @App({
   template: '<ion-nav [root]="rootPage"></ion-nav>',
   providers: [DataService],
-  config: {} // http://ionicframework.com/docs/v2/api/config/Config/
+  config: {
+    backButtonText: 'חזרה'
+  } // http://ionicframework.com/docs/v2/api/config/Config/
 })
 export class MyApp {
   rootPage: Type = HomePage;

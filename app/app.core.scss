@@ -12,4 +12,8 @@
 ion-content {
     background: url("../images/themes/clouds/background.png");
     background-size: cover;
+
+    scroll-content {
+        overflow: hidden;
+    }
 }
