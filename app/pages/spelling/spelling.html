@@ -1,7 +1,15 @@
 <ion-navbar *navbar>
-  <ion-title>{{gameData.title}}</ion-title>
+    <ion-title>{{gameData.title}}</ion-title>
 </ion-navbar>
 
 <ion-content padding class="spelling">
-  ddddd
+    <div *ngIf="currentWord">
+        <div class="image">
+            <img src="../../build/{{currentWord.image}}">
+        </div>
+        <div class="result" *ngIf="result">
+            <letter *ngFor="#l of result | direction:gameData.data.direction" image="{{dataService.data.letters[l]}}"></letter>
+        </div>
+    </div>
+
 </ion-content>
