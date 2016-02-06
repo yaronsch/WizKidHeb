@@ -1,3 +1,54 @@
+$letter-gray: #666766;
+$frame-orange: #F58538;
+
 .spelling {
+    .image {
+        background-color: rgba(255,255,255,0.7);
+
+    }
+
+    .result {
+        margin: 20px auto;
+
+        .letters-container {
+            text-align: center;
+
+            .letter {
+                width: 50px;
+                height:50px;
+                display: inline-block;
+                margin: 0 2px;
+            }
+            .blank-letter {
+                border-bottom: 5px solid $letter-gray;
+                height:50px;
+
+            }
+        }
+    }
+
+    .suggestions {
+        margin: 40px auto;
+
+        .letters-container {
+            text-align: center;
+
+            letter {
+                .letter {
+                    width: 15%;
+                    display: inline-block;
+                    margin: 4px 1%;
+                    border: 2px solid $frame-orange;
+                    background-color: rgba(255,255,255,0.7);
+                }
+
+                &.used {
+                    .letter {
+                        background-color: rgba(245,133,56,0.7);
+                    }
+                }
+            }
+        }
+    }
 
 }

@@ -9,9 +9,9 @@ export class TextDirection {
      Takes an array or string and reverses it
     */
     transform(value, args) {
-        if (args === 'rtl') {
+        if (args && args[0] === 'rtl') {
             if (isArray(value)) {
-                return value.reverse();
+                return value.slice().reverse();
             }
             else {
                 value += '';

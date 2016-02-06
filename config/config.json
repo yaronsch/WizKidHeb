@@ -68,7 +68,9 @@
     "ם": "24",
     "ן": "25",
     "ף": "26",
-    "ץ": "27",
+    "ץ": "27"
+  },
+  "signs": {
     "equals": "equal",
     "plus": "addition",
     "minus": "subtraction",
