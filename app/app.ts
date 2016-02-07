@@ -10,7 +10,8 @@ import {Type} from 'angular2/core';
   template: '<ion-nav [root]="rootPage"></ion-nav>',
   providers: [DataService],
   config: {
-    backButtonText: 'חזרה'
+    backButtonText: 'חזרה',
+    mode: 'ios'
   } // http://ionicframework.com/docs/v2/api/config/Config/
 })
 export class MyApp {

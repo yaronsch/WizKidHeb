@@ -30,7 +30,7 @@ export class SpellingPage {
             this.availableWords = this.gameData.data.words.slice(0);
         }
         let wordIndex = Math.floor(Math.random() * this.availableWords.length);
-        this.currentWord = this.availableWords[wordIndex];
+        this.currentWord = this.availableWords.splice(wordIndex, 1)[0];
         this.currentIndex = 0;
         this.currentWordSpelling = this.currentWord.spelling.split('');
 
@@ -54,15 +54,23 @@ export class SpellingPage {
         if (letter.used) {
             return;
         }
-        debugger;
         if (letter.value === this.currentWordSpelling[this.currentIndex]) {
             //TODO success!!!
             this.result = this.result.map((l, index) => index == this.currentIndex ? letter.value : l);
             letter.used = true;
             this.currentIndex++;
+            if (this.currentIndex === this.currentWordSpelling.length) {
+                this.onComplete();
+            }
         }
+        else {
+            //TODO fail :(
+        }
+    }
 
-
+    onComplete() {
+        setTimeout(() => {this.nextWord()}, 1000);
+        //this.nextWord();
     }
 
     shuffle(array: any[]) {

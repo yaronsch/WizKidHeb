@@ -8,7 +8,7 @@
             <img src="../../build/{{currentWord.image}}">
         </div >
         <div class="result" *ngIf="result">
-            <div class="letters-container">
+            <div class="letters-container" [ngClass]="{completed: currentIndex === currentWordSpelling.length}">
                 <letter *ngFor="#l of result | direction:gameData.data.direction" image="{{dataService.data.letters[l]}}"></letter>
             </div>
         </div>
@@ -17,6 +17,10 @@
                 <letter *ngFor="#l of suggestions" image="{{dataService.data.letters[l.value]}}"
                         (click)="letterClicked($event, l)" [ngClass]="{used: l.used}"></letter>
             </div>
+        </div>
+
+        <div class="buttons">
+            <button (click)="nextWord()">המילה הבאה</button>
         </div>
     </div>
 

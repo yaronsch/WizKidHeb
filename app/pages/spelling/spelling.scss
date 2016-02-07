@@ -1,6 +1,20 @@
 $letter-gray: #666766;
 $frame-orange: #F58538;
 
+@keyframes success-spelling {
+    0% {
+        border: 2px solid transparent;
+    }
+
+    50% {
+        border: 2px solid green;
+    }
+
+    100% {
+        border: 2px solid transparent;
+    }
+}
+
 .spelling {
     .image {
         background-color: rgba(255,255,255,0.7);
@@ -12,6 +26,10 @@ $frame-orange: #F58538;
 
         .letters-container {
             text-align: center;
+
+            &.completed {
+                animation: success-spelling 0.3s infinite;
+            }
 
             .letter {
                 width: 50px;
@@ -49,6 +67,10 @@ $frame-orange: #F58538;
                 }
             }
         }
+    }
+    
+    .buttons {
+        text-align: center;
     }
 
 }
