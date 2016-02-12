@@ -5,7 +5,7 @@
 <ion-content padding class="spelling">
     <div *ngIf="currentWord">
         <div class="image">
-            <img src="../../build/{{currentWord.image}}">
+            <img src="build/{{currentWord.image}}">
         </div >
         <div class="result" *ngIf="result">
             <div class="letters-container" [ngClass]="{completed: currentIndex === currentWordSpelling.length}">

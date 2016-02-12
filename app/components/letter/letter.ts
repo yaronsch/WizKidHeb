@@ -7,7 +7,7 @@ import {ViewEncapsulation} from "angular2/core";
     selector: 'letter',
     template: `
     <div class="letter">
-        <img *ngIf="image" src="../../build/images/themes/clouds/letters/{{image}}.png"/>
+        <img *ngIf="image" src="build/images/themes/clouds/letters/{{image}}.png"/>
         <div *ngIf="!image" class="blank-letter"></div>
     </div>
     `,

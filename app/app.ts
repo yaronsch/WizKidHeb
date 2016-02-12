@@ -4,11 +4,12 @@ import {DataService} from './services/data-service'
 
 // https://angular.io/docs/ts/latest/api/core/Type-interface.html
 import {Type} from 'angular2/core';
+import {HTTP_PROVIDERS} from "angular2/http";
 
 
 @App({
   template: '<ion-nav [root]="rootPage"></ion-nav>',
-  providers: [DataService],
+  providers: [DataService, HTTP_PROVIDERS],
   config: {
     backButtonText: 'חזרה',
     mode: 'ios'
