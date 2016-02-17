@@ -14,7 +14,7 @@
         </div>
         <div class="suggestions" *ngIf="suggestions">
             <div class="letters-container">
-                <letter *ngFor="#l of suggestions" image="{{dataService.data.letters[l.value]}}"
+                <letter *ngFor="#l of suggestions | shuffle" image="{{dataService.data.letters[l.value]}}"
                         (click)="letterClicked($event, l)" [ngClass]="{used: l.used}"></letter>
             </div>
         </div>

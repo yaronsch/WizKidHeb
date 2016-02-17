@@ -3,13 +3,14 @@ import {Input} from "angular2/core";
 import {DataService} from "../../services/data-service";
 import {Letter} from "../../components/letter/letter";
 import {TextDirection} from "../../pipes/direction";
+import {ShuffleArray} from "../../pipes/shuffle";
 
 const NUM_SUGGESTIONS: number = 10;
 
 @Page({
     templateUrl: 'build/pages/spelling/spelling.html',
     directives: [Letter],
-    pipes: [TextDirection]
+    pipes: [TextDirection, ShuffleArray]
 })
 export class SpellingPage {
 
@@ -45,9 +46,9 @@ export class SpellingPage {
             fakeLetters[i] = {value:  Object.keys(this.dataService.data.letters)[index], used: false};
         }
 
-        this.suggestions = this.shuffle(this.currentWordSpelling.map(l => {
+        this.suggestions = this.currentWordSpelling.map(l => {
             return {value: l, used: false};
-        }).concat(fakeLetters));
+        }).concat(fakeLetters);
     }
 
     letterClicked(event, letter) {
@@ -70,25 +71,6 @@ export class SpellingPage {
 
     onComplete() {
         setTimeout(() => {this.nextWord()}, 1000);
-        //this.nextWord();
     }
 
-    shuffle(array: any[]) {
-        let currentIndex = array.length, temporaryValue, randomIndex;
-
-        // While there remain elements to shuffle...
-        while (0 !== currentIndex) {
-
-            // Pick a remaining element...
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex -= 1;
-
-            // And swap it with the current element.
-            temporaryValue = array[currentIndex];
-            array[currentIndex] = array[randomIndex];
-            array[randomIndex] = temporaryValue;
-        }
-
-        return array;
-    }
 }
