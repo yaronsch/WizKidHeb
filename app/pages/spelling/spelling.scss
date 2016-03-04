@@ -17,59 +17,111 @@ $frame-orange: #F58538;
 
 .spelling {
     .image {
-        background-color: rgba(255,255,255,0.7);
-
-    }
-
-    .result {
-        margin: 20px auto;
-
-        .letters-container {
-            text-align: center;
-
-            &.completed {
-                animation: success-spelling 0.3s infinite;
-            }
-
-            .letter {
-                width: 12%;
-                display: inline-block;
-                margin: 0 2px;
-            }
-            .blank-letter {
-                border-bottom: 5px solid $letter-gray;
-                height:50px;
-
-            }
+        img {
+            width: 60%;
+            margin-left: 30%;
         }
+
     }
 
-    .suggestions {
-        margin: 40px auto;
+    @media screen and (device-aspect-ratio: 4/3)  and (orientation: landscape) {
+        .result {
+            margin: 20px auto;
 
-        .letters-container {
-            text-align: center;
+            .letters-container {
+                text-align: center;
+                height: 5%;
 
-            letter {
-                .letter {
-                    width: 15%;
-                    display: inline-block;
-                    margin: 4px 1%;
-                    border: 2px solid $frame-orange;
-                    background-color: rgba(255,255,255,0.7);
+                &.completed {
+                    animation: success-spelling 0.3s infinite;
                 }
 
-                &.used {
+                .letter {
+                    width: 12%;
+                    display: inline-block;
+                    margin: 0 2px;
+                }
+            }
+        }
+
+        .suggestions {
+            margin: 40px auto 20px;
+
+            .letters-container {
+                text-align: center;
+
+                letter {
                     .letter {
-                        background-color: rgba(245,133,56,0.7);
+                        width: 6%;
+                        display: inline-block;
+                        margin: 4px 1%;
+                        border: 2px solid $frame-orange;
+                        background-color: rgba(255,255,255,0.7);
+                    }
+
+                    &.used {
+                        .letter {
+                            background-color: rgba(245,133,56,0.7);
+                        }
                     }
                 }
             }
         }
+
+        .buttons {
+            text-align: center;
+        }
     }
-    
-    .buttons {
-        text-align: center;
+
+    @media screen and (min-device-aspect-ratio: 16/10) and (orientation: landscape) {
+        .result {
+            margin: -10px auto 10px;
+
+            .letters-container {
+                text-align: center;
+                height: 5%;
+
+                &.completed {
+                    animation: success-spelling 0.3s infinite;
+                }
+
+                .letter {
+                    width: 10%;
+                    display: inline-block;
+                    margin: 0 2px;
+                }
+            }
+        }
+
+        .suggestions {
+            float: right;
+            width: 3%;
+            margin-right: 1%;
+            margin-top: -49%;
+
+            .letters-container {
+                text-align: center;
+
+                letter {
+                    .letter {
+                        display: inline-block;
+                        margin: 4px 1%;
+                        border: 2px solid $frame-orange;
+                        background-color: rgba(255,255,255,0.7);
+                    }
+
+                    &.used {
+                        .letter {
+                            background-color: rgba(245,133,56,0.7);
+                        }
+                    }
+                }
+            }
+        }
+
+        .buttons {
+            text-align: center;
+        }
     }
 
 }

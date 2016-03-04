@@ -12,6 +12,7 @@ import {HTTP_PROVIDERS} from "angular2/http";
   providers: [DataService, HTTP_PROVIDERS],
   config: {
     backButtonText: 'חזרה',
+    backButtonIcon: 'custom-back',
     mode: 'ios'
   } // http://ionicframework.com/docs/v2/api/config/Config/
 })
@@ -20,9 +21,7 @@ export class MyApp {
 
   constructor(platform: Platform) {
     platform.ready().then(() => {
-      if (window.screen.lockOrientation) {
-        window.screen.lockOrientation('landscape');
-      }
+
       // The platform is now ready. Note: if this callback fails to fire, follow
       // the Troubleshooting guide for a number of possible solutions:
       //
