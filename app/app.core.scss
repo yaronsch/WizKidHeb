@@ -8,7 +8,10 @@
 // App Shared Sass variables belong in app.variables.scss.
 
 @import 'pages/home/home';
+@import 'pages/words/words';
+@import 'pages/math/math';
 @import 'pages/spelling/spelling';
+@import 'pages/addition/addition';
 
 ion-content {
     background: url("../images/themes/clouds/background.png");

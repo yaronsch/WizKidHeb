@@ -1,142 +1,154 @@
 {
-  "games": [
+  "menu": [
     {
       "id": 1,
-      "title": "איות",
-      "data": {
-        "direction": "rtl",
-        "words": [
-          {
-            "name": "alligator",
-            "spelling": "תנין",
-            "image": "images/aligator.png"
-          },
-          {
-            "name": "balloon",
-            "spelling": "בלון",
-            "image": "images/baloon.png"
-          },
-          {
-            "name": "ball",
-            "spelling": "כדור",
-            "image": "images/basketball.png"
-          },
-          {
-            "name": "book",
-            "spelling": "ספר",
-            "image": "images/book.png"
-          },
-          {
-            "name": "car",
-            "spelling": "מכונית",
-            "image": "images/car.png"
-          },
-          {
-            "name": "carrot",
-            "spelling": "גזר",
-            "image": "images/carrot.png"
-          },
-          {
-            "name": "cat",
-            "spelling": "חתול",
-            "image": "images/cat.png"
-          },
-          {
-            "name": "computer",
-            "spelling": "מחשב",
-            "image": "images/computer.png"
-          },
-          {
-            "name": "eggplant",
-            "spelling": "חציל",
-            "image": "images/eggplant.png"
-          },
-          {
-            "name": "elephant",
-            "spelling": "פיל",
-            "image": "images/elephant.png"
-          },
-          {
-            "name": "guitar",
-            "spelling": "גיטרה",
-            "image": "images/guitar.png"
-          },
-          {
-            "name": "hat",
-            "spelling": "כובע",
-            "image": "images/hat.png"
-          },
-          {
-            "name": "helicopter",
-            "spelling": "מסוק",
-            "image": "images/helicopter.png"
-          },
-          {
-            "name": "watermelon",
-            "spelling": "אבטיח",
-            "image": "images/Itamar.png"
-          },
-          {
-            "name": "lion",
-            "spelling": "אריה",
-            "image": "images/lion.png"
-          },
-          {
-            "name": "owl",
-            "spelling": "ינשוף",
-            "image": "images/owl.png"
-          },
-          {
-            "name": "plane",
-            "spelling": "מטוס",
-            "image": "images/plane.png"
-          },
-          {
-            "name": "rocket",
-            "spelling": "טיל",
-            "image": "images/rocket.png"
-          },
-          {
-            "name": "shirt",
-            "spelling": "חולצה",
-            "image": "images/shirt.png"
-          },
-          {
-            "name": "shoe",
-            "spelling": "נעל",
-            "image": "images/shoe.png"
-          },
-          {
-            "name": "slide",
-            "spelling": "מגלשה",
-            "image": "images/slide.png"
-          },
-          {
-            "name": "sun",
-            "spelling": "שמש",
-            "image": "images/sun.png"
-          },
-          {
-            "name": "tree",
-            "spelling": "עץ",
-            "image": "images/tree.png"
-          },
-          {
-            "name": "turtle",
-            "spelling": "צב",
-            "image": "images/turtle.png"
-          },
-          {
-            "name": "umbrella",
-            "spelling": "מטריה",
-            "image": "images/umbrella.png"
+      "title": "כתיבה",
+      "games": [
+        {
+          "id": 1,
+          "title": "איות",
+          "data": {
+            "direction": "rtl",
+            "words": [
+              {
+                "name": "alligator",
+                "spelling": "תנין",
+                "image": "images/aligator.png"
+              },
+              {
+                "name": "balloon",
+                "spelling": "בלון",
+                "image": "images/baloon.png"
+              },
+              {
+                "name": "ball",
+                "spelling": "כדור",
+                "image": "images/basketball.png"
+              },
+              {
+                "name": "book",
+                "spelling": "ספר",
+                "image": "images/book.png"
+              },
+              {
+                "name": "car",
+                "spelling": "מכונית",
+                "image": "images/car.png"
+              },
+              {
+                "name": "carrot",
+                "spelling": "גזר",
+                "image": "images/carrot.png"
+              },
+              {
+                "name": "cat",
+                "spelling": "חתול",
+                "image": "images/cat.png"
+              },
+              {
+                "name": "computer",
+                "spelling": "מחשב",
+                "image": "images/computer.png"
+              },
+              {
+                "name": "eggplant",
+                "spelling": "חציל",
+                "image": "images/eggplant.png"
+              },
+              {
+                "name": "elephant",
+                "spelling": "פיל",
+                "image": "images/elephant.png"
+              },
+              {
+                "name": "guitar",
+                "spelling": "גיטרה",
+                "image": "images/guitar.png"
+              },
+              {
+                "name": "hat",
+                "spelling": "כובע",
+                "image": "images/hat.png"
+              },
+              {
+                "name": "helicopter",
+                "spelling": "מסוק",
+                "image": "images/helicopter.png"
+              },
+              {
+                "name": "watermelon",
+                "spelling": "אבטיח",
+                "image": "images/Itamar.png"
+              },
+              {
+                "name": "lion",
+                "spelling": "אריה",
+                "image": "images/lion.png"
+              },
+              {
+                "name": "owl",
+                "spelling": "ינשוף",
+                "image": "images/owl.png"
+              },
+              {
+                "name": "plane",
+                "spelling": "מטוס",
+                "image": "images/plane.png"
+              },
+              {
+                "name": "rocket",
+                "spelling": "טיל",
+                "image": "images/rocket.png"
+              },
+              {
+                "name": "shirt",
+                "spelling": "חולצה",
+                "image": "images/shirt.png"
+              },
+              {
+                "name": "shoe",
+                "spelling": "נעל",
+                "image": "images/shoe.png"
+              },
+              {
+                "name": "slide",
+                "spelling": "מגלשה",
+                "image": "images/slide.png"
+              },
+              {
+                "name": "sun",
+                "spelling": "שמש",
+                "image": "images/sun.png"
+              },
+              {
+                "name": "tree",
+                "spelling": "עץ",
+                "image": "images/tree.png"
+              },
+              {
+                "name": "turtle",
+                "spelling": "צב",
+                "image": "images/turtle.png"
+              },
+              {
+                "name": "umbrella",
+                "spelling": "מטריה",
+                "image": "images/umbrella.png"
+              }
+            ]
           }
-        ]
-      }
+        }
+      ]
     },
     {
       "id": 2,
-      "title": "חיבור"
+      "title": "חשבון",
+      "games": [
+        {
+          "id": 1,
+          "title": "חיבור"
+        }
+      ]
     }
   ],
   "themes": [

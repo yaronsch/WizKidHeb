@@ -22,7 +22,7 @@ export class SpellingPage {
     result = [];
     private availableWords = [];
     constructor(private dataService: DataService) {
-        this.gameData = dataService.data.games[0];
+        this.gameData = dataService.data.menu[0].games[0];
         this.nextWord();
     }
 
@@ -57,7 +57,8 @@ export class SpellingPage {
         }
         if (letter.value === this.currentWordSpelling[this.currentIndex]) {
             //TODO success!!!
-            this.result = this.result.map((l, index) => index == this.currentIndex ? letter.value : l);
+            this.result[this.currentIndex] = letter.value;
+            this.result = this.result.concat();
             letter.used = true;
             this.currentIndex++;
             if (this.currentIndex === this.currentWordSpelling.length) {

@@ -1,0 +1,9 @@
+<ion-navbar *navbar>
+  <ion-title>{{menuData.title}}</ion-title>
+</ion-navbar>
+
+<ion-content class="words" *ngIf="menuData">
+  <ion-card *ngFor="#game of menuData.games" (click)="launchGame(game)">
+    {{game.title}}
+  </ion-card>
+</ion-content>

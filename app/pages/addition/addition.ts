@@ -21,7 +21,7 @@ export class AdditionPage {
     suggestions: string[];
 
     constructor(private dataService: DataService) {
-        this.gameData = dataService.data.games[0];
+        this.gameData = dataService.data.menu[1].games[0];
         this.nextExercise();
     }
 
