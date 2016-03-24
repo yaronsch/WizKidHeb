@@ -1,3 +1,80 @@
 .addition {
 
+
+    @media screen and (device-aspect-ratio: 4/3)  and (orientation: landscape) {
+        .exercise {
+            width: 60%;
+            margin-left: 40%;
+
+            .number, .letter {
+                width: 15%;
+                display: inline-block;
+            }
+        }
+
+        .suggestions {
+            margin: 40px auto 20px;
+
+            .letters-container {
+                text-align: center;
+
+                letter {
+                    .letter {
+                        width: 6%;
+                        display: inline-block;
+                        margin: 4px 1%;
+                        border: 2px solid $frame-orange;
+                        background-color: rgba(255,255,255,0.7);
+                    }
+
+                    &.used {
+                        .letter {
+                            background-color: rgba(245,133,56,0.7);
+                        }
+                    }
+                }
+            }
+        }
+
+        .buttons {
+            text-align: center;
+        }
+    }
+
+    @media screen and (min-device-aspect-ratio: 16/10) and (orientation: landscape) {
+        .exercise {
+            width: 60%;
+            margin-left: 30%;
+        }
+
+        .suggestions {
+            float: right;
+            width: 3%;
+            margin-right: 1%;
+            margin-top: -49%;
+
+            .letters-container {
+                text-align: center;
+
+                letter {
+                    .letter {
+                        display: inline-block;
+                        margin: 4px 1%;
+                        border: 2px solid $frame-orange;
+                        background-color: rgba(255,255,255,0.7);
+                    }
+
+                    &.used {
+                        .letter {
+                            background-color: rgba(245,133,56,0.7);
+                        }
+                    }
+                }
+            }
+        }
+
+        .buttons {
+            text-align: center;
+        }
+    }
 }
