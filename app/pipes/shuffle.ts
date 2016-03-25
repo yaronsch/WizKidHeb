@@ -1,5 +1,5 @@
 import {Injectable, Pipe} from 'angular2/core';
-import {isArray} from "util";
+
 @Pipe({
     name: 'shuffle'
 })
@@ -9,7 +9,7 @@ export class ShuffleArray {
      Takes an array or string and reverses it
      */
     transform(value) {
-        if (!isArray(value)) {
+        if (!Array.isArray(value)) {
             return value;
         }
         let currentIndex = value.length, temporaryValue, randomIndex;

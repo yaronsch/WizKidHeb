@@ -1,5 +1,4 @@
-import {Page} from 'ionic-framework/ionic';
-import {Input} from "angular2/core";
+import {Page} from 'ionic-angular';
 import {DataService} from "../../services/data-service";
 import {Letter} from "../../components/letter/letter";
 import {TextDirection} from "../../pipes/direction";

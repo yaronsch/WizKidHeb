@@ -1,4 +1,4 @@
-import {Page} from 'ionic-framework/ionic';
+import {Page} from 'ionic-angular';
 import {DataService} from "../../services/data-service";
 import {ShuffleArray} from "../../pipes/shuffle";
 import {Letter} from "../../components/letter/letter";

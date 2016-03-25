@@ -1,5 +1,5 @@
 import {Injectable, Pipe} from 'angular2/core';
-import {isArray} from "util";
+
 @Pipe({
   name: 'direction'
 })
@@ -10,7 +10,7 @@ export class TextDirection {
     */
     transform(value, args) {
         if (args && args[0] === 'rtl') {
-            if (isArray(value)) {
+            if (Array.isArray(value)) {
                 return value.slice().reverse();
             }
             else {

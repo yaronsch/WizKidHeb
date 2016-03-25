@@ -1,5 +1,4 @@
-import {Page} from 'ionic-framework/ionic';
-import {NavController} from 'ionic-framework/components/nav/nav-controller'
+import {Page, NavController} from 'ionic-angular';
 import {DataService} from '../../services/data-service'
 import {WordsPage} from "../words/words";
 import {MathPage} from "../math/math";

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.ionicframework.testapp135427" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>WizKid</name>
   <description>An Ionic Framework and Cordova project.</description>
   <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
   <content src="index.html"/>
   <access origin="*"/>
-  <allow-navigation href="http://*/*"/>
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
   <allow-intent href="tel:*"/>
@@ -23,9 +22,14 @@
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="16"/>
-  <preference name="BackupWebStorage" value="none"/>
   <preference name="Orientation" value="landscape"/>
   <feature name="StatusBar">
     <param name="ios-package" onload="true" value="CDVStatusBar"/>
   </feature>
+  <plugin name="cordova-plugin-device" spec="~1.1.1"/>
+  <plugin name="cordova-plugin-console" spec="~1.0.2"/>
+  <plugin name="cordova-plugin-whitelist" spec="~1.2.1"/>
+  <plugin name="cordova-plugin-splashscreen" spec="~3.2.1"/>
+  <plugin name="cordova-plugin-statusbar" spec="~2.1.2"/>
+  <plugin name="ionic-plugin-keyboard" spec="~2.0.1"/>
 </widget>
