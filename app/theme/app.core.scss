@@ -7,14 +7,25 @@
 // By default each design mode includes these shared imports.
 // App Shared Sass variables belong in app.variables.scss.
 
-@import 'pages/home/home';
-@import 'pages/words/words';
-@import 'pages/math/math';
-@import 'pages/spelling/spelling';
-@import 'pages/addition/addition';
+@import '../pages/home/home';
+@import '../pages/words/words';
+@import '../pages/math/math';
+@import '../pages/spelling/spelling';
+@import '../pages/addition/addition';
 
+@media screen and (device-aspect-ratio: 4/3)  and (orientation: landscape) {
+    ion-content {
+        background: url("../images/themes/clouds/background.png");
+    }
+}
+
+@media screen and (min-device-aspect-ratio: 16/10) and (orientation: landscape) {
+    ion-content {
+        background: url("../images/themes/clouds/background_phone.png");
+    }
+}
 ion-content {
-    background: url("../images/themes/clouds/background.png");
+
     background-size: cover;
 
     scroll-content {

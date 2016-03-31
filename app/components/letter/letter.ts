@@ -7,14 +7,17 @@ import {ViewEncapsulation} from "angular2/core";
     selector: 'letter',
     template: `
     <div class="letter">
-        <img *ngIf="image" src="build/images/themes/clouds/letters/{{image}}.png"/>
-        <img *ngIf="!image" src="build/images/themes/clouds/letters/line.png" class="blank-letter"/>
+        <img *ngIf="image" class="letter-img" src="build/images/themes/{{theme}}/letters/{{image}}.png"/>
+        <img *ngIf="!image" class="letter-img" src="build/images/themes/{{theme}}/letters/line.png" class="blank-letter"/>
+        <!--<img *ngIf="frame" class="frame" src="build/images/themes/{{theme}}/letters/frame.png"> -->
     </div>
     `,
     encapsulation: ViewEncapsulation.None
 })
 export class Letter {
     @Input() image: string;
+    @Input() theme: string;
+    // @Input() frame: boolean;
     constructor() {
 
     }
