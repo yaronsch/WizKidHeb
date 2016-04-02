@@ -8,8 +8,7 @@ import {ViewEncapsulation} from "angular2/core";
     template: `
     <div class="letter">
         <img *ngIf="image" class="letter-img" src="build/images/themes/{{theme}}/letters/{{image}}.png"/>
-        <img *ngIf="!image" class="letter-img" src="build/images/themes/{{theme}}/letters/line.png" class="blank-letter"/>
-        <!--<img *ngIf="frame" class="frame" src="build/images/themes/{{theme}}/letters/frame.png"> -->
+        <img *ngIf="!image" class="letter-img" src="build/images/themes/{{theme}}/letters/line.png" class="blank-letter"/>    
     </div>
     `,
     encapsulation: ViewEncapsulation.None
@@ -17,7 +16,6 @@ import {ViewEncapsulation} from "angular2/core";
 export class Letter {
     @Input() image: string;
     @Input() theme: string;
-    // @Input() frame: boolean;
     constructor() {
 
     }

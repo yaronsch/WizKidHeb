@@ -26,9 +26,19 @@
                 "image": "images/basketball.png"
               },
               {
+                "name": "boat",
+                "spelling": "סירה",
+                "image": "images/boat.png"
+              },
+              {
                 "name": "book",
                 "spelling": "ספר",
                 "image": "images/book.png"
+              },
+              {
+                "name": "bottle",
+                "spelling": "בקבוק",
+                "image": "images/bottle.png"
               },
               {
                 "name": "car",
@@ -46,6 +56,11 @@
                 "image": "images/cat.png"
               },
               {
+                "name": "cloud",
+                "spelling": "ענן",
+                "image": "images/cloud.png"
+              },
+              {
                 "name": "computer",
                 "spelling": "מחשב",
                 "image": "images/computer.png"
@@ -59,6 +74,11 @@
                 "name": "elephant",
                 "spelling": "פיל",
                 "image": "images/elephant.png"
+              },
+              {
+                "name": "fish",
+                "spelling": "דג",
+                "image": "images/fish.png"
               },
               {
                 "name": "guitar",
@@ -81,6 +101,16 @@
                 "image": "images/Itamar.png"
               },
               {
+                "name": "leaf",
+                "spelling": "עלה",
+                "image": "images/leaf.png"
+              },
+              {
+                "name": "lightbulb",
+                "spelling": "נורה",
+                "image": "images/lightbulb.png"
+              },
+              {
                 "name": "lion",
                 "spelling": "אריה",
                 "image": "images/lion.png"
@@ -96,9 +126,24 @@
                 "image": "images/plane.png"
               },
               {
+                "name": "rhino",
+                "spelling": "קרנף",
+                "image": "images/rhino.png"
+              },
+              {
                 "name": "rocket",
                 "spelling": "טיל",
                 "image": "images/rocket.png"
+              },
+              {
+                "name": "sheep",
+                "spelling": "כבשה",
+                "image": "images/sheep.png"
+              },
+              {
+                "name": "ship",
+                "spelling": "אניה",
+                "image": "images/ship.png"
               },
               {
                 "name": "shirt",
