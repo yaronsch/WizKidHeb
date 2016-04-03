@@ -1,7 +1,6 @@
-<ion-navbar *navbar>
-    <ion-title>{{gameData.title}}</ion-title>
-</ion-navbar>
-
+<div class="top-buttons">
+    <button (click)="goBack()"><img src="build/images/buttons/back.png">חזרה </button>
+</div>
 <ion-content padding class="spelling">
     <div *ngIf="currentWord">
         <div class="image">

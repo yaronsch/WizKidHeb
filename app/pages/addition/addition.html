@@ -1,21 +1,21 @@
-<ion-navbar *navbar>
-  <ion-title>{{gameData.title}}</ion-title>
-</ion-navbar>
+<div class="top-buttons">
+  <button (click)="goBack()"><img src="build/images/buttons/back.png">חזרה </button>
+</div>
 
 <ion-content padding class="addition">
   <div *ngIf="exNumbers">
     <div class="exercise">
-      <span><number value="{{exNumbers.a}}"></number></span>
-      <span><letter image="addition"></letter></span>
-      <span><number value="{{exNumbers.b}}"></number></span>
-      <span><letter image="equal"></letter></span>
-      <span><number value="{{exNumbers.target}}"></number></span>
+      <span><number [value]="exNumbers.find === 'a' ? '' : exNumbers.a" [theme]="'blackboard'"></number></span>
+      <span><letter [image]="'addition'" [theme]="'blackboard'"></letter></span>
+      <span><number [value]="exNumbers.find === 'b' ? '' : exNumbers.b" [theme]="'blackboard'"></number></span>
+      <span><letter [image]="'equal'" [theme]="'blackboard'"></letter></span>
+      <span><number [value]="exNumbers.find === 'target' ? '' : exNumbers.target" [theme]="'blackboard'"></number></span>
     </div >
 
     <div class="suggestions" *ngIf="suggestions">
       <div class="letters-container">
-        <number *ngFor="#s of suggestions" value="{{s}}"
-                (click)="numberClicked($event, s)"></number>
+        <number *ngFor="#s of suggestions" [value]="s"
+                (click)="numberClicked($event, s)" [theme]="'blackboard'"></number>
       </div>
     </div>
 

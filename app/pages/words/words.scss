@@ -1,6 +1,10 @@
 .words {
     overflow: hidden;
 
+    .cards {
+        margin-top: 40px;
+    }
+
     ion-card {
         height: 50px;
         opacity: 0.7;

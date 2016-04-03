@@ -7,3 +7,4 @@ resources/*
 !resources/*.png
 .idea/
 typings/
+images/

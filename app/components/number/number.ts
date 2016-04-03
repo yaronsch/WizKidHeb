@@ -1,26 +1,34 @@
-import {Component} from 'angular2/core';
+import {Component, SimpleChange} from 'angular2/core';
 import {Input} from "angular2/core";
-import {Output} from "angular2/core";
 import {ViewEncapsulation} from "angular2/core";
 
 @Component({
     selector: 'number',
     template: `
-    <div class="number">
-        <span *ngIf="digits" ><img *ngFor="#digit of digits" src="build/images/themes/clouds/letters/{{digit}}.png"/></span>
-        <div *ngIf="!value" class="blank-number"></div>
+    <div class="number" [ngClass]="{'single-digit': digits && digits.length === 1, 'double-digit': digits && digits.length === 2}">
+        <span *ngIf="digits" ><img *ngFor="#digit of digits" src="build/images/themes/{{theme}}/letters/{{digit}}.png"/></span>
+        <img *ngIf="!value" class="blank-number" src="build/images/themes/{{theme}}/letters/line.png"/>        
     </div>
     `,
     encapsulation: ViewEncapsulation.None
 })
 export class Number {
     @Input() value: string;
+    @Input() theme: string;
     digits :string[];
     constructor() {
 
     }
 
     ngOnInit() {
-        this.digits = this.value.split('');
+        this.digits = this.value.toString().split('');
+    }
+
+    ngOnChanges(changes: {[propertyName: string]: SimpleChange}) {
+        for (let propName in changes) {
+            if (propName === 'value' && changes[propName].currentValue !== changes[propName].previousValue) {
+                this.digits = changes[propName].currentValue.toString().split('');
+            }
+        }
     }
 }

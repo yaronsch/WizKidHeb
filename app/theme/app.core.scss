@@ -13,7 +13,7 @@
 @import '../pages/spelling/spelling';
 @import '../pages/addition/addition';
 
-@media screen and (device-aspect-ratio: 4/3)  and (orientation: landscape) {
+@media screen and (min-device-aspect-ratio: 4/3)  and (orientation: landscape) {
     ion-content {
         background: url("../images/themes/clouds/background.png");
     }
@@ -43,4 +43,24 @@ ion-icon.back-button-icon.ion-ios-custom-back:before {
 
 .back-button-text .back-default {
     color: $frame-orange;
+}
+
+ion-page {
+    div.top-buttons {
+        position: absolute;
+        z-index: 2;
+
+        button {
+            background-color: transparent;
+            color: $frame-orange;
+
+            &.activated {
+                background-color: transparent;
+            }
+
+            img {
+                width: 50px;
+            }
+        }
+    }
 }

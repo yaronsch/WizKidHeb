@@ -22,4 +22,8 @@ export class WordsPage {
         }
 
     }
+
+    goBack() {
+        this.nav.pop();
+    }
 }

@@ -1,10 +1,10 @@
-import {Page} from 'ionic-angular';
+import {Page, NavController} from 'ionic-angular';
 import {DataService} from "../../services/data-service";
 import {Letter} from "../../components/letter/letter";
 import {TextDirection} from "../../pipes/direction";
 import {ShuffleArray} from "../../pipes/shuffle";
 
-const NUM_SUGGESTIONS: number = 10;
+const NUM_SUGGESTIONS: number = 8;
 
 @Page({
     templateUrl: 'build/pages/spelling/spelling.html',
@@ -20,7 +20,7 @@ export class SpellingPage {
     suggestions = [];
     result = [];
     private availableWords = [];
-    constructor(private dataService: DataService) {
+    constructor(private dataService: DataService, private nav: NavController) {
         this.gameData = dataService.data.menu[0].games[0];
         this.nextWord();
     }
@@ -71,6 +71,10 @@ export class SpellingPage {
 
     onComplete() {
         setTimeout(() => {this.nextWord()}, 1000);
+    }
+
+    goBack() {
+        this.nav.pop();
     }
 
 }

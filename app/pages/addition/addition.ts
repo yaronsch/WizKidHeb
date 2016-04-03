@@ -1,4 +1,4 @@
-import {Page} from 'ionic-angular';
+import {Page, NavController} from 'ionic-angular';
 import {DataService} from "../../services/data-service";
 import {ShuffleArray} from "../../pipes/shuffle";
 import {Letter} from "../../components/letter/letter";
@@ -20,7 +20,7 @@ export class AdditionPage {
     exNumbers: any = {a: 0, b: 0};
     suggestions: string[];
 
-    constructor(private dataService: DataService) {
+    constructor(private dataService: DataService, private nav: NavController) {
         this.gameData = dataService.data.menu[1].games[0];
         this.nextExercise();
     }
@@ -61,9 +61,10 @@ export class AdditionPage {
     }
 
     numberClicked(event, num) {
-        if (num === this.exNumbers[this.exNumbers.find]) {
+        if (num == this.exNumbers[this.exNumbers.find]) {
             //TODO success
             this.exNumbers.success = true;
+            this.exNumbers.find = null;
             if (this.max < MAX) {
                 this.max++;
                 this. min = Math.floor(MIN_MAX_RATIO * this.max);
@@ -76,7 +77,7 @@ export class AdditionPage {
     }
 
     onComplete() {
-        setTimeout(() => {this.nextExercise()}, 1000);
+        setTimeout(() => {this.nextExercise();}, 1000);
     }
 
     generateNumbers() {
@@ -91,5 +92,9 @@ export class AdditionPage {
             nums = {a, b, target};
         }
         return nums;
+    }
+
+    goBack() {
+        this.nav.pop();
     }
 }

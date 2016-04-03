@@ -1,9 +1,10 @@
-<ion-navbar *navbar>
-  <ion-title>{{menuData.title}}</ion-title>
-</ion-navbar>
-
+<div class="top-buttons">
+  <button (click)="goBack()"><img src="build/images/buttons/back.png">חזרה </button>
+</div>
 <ion-content class="words" *ngIf="menuData">
-  <ion-card *ngFor="#game of menuData.games" (click)="launchGame(game)">
-    {{game.title}}
-  </ion-card>
+  <div class="cards">
+    <ion-card *ngFor="#game of menuData.games" (click)="launchGame(game)">
+      {{game.title}}
+    </ion-card>
+  </div>
 </ion-content>

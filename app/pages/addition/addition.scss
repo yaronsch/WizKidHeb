@@ -1,27 +1,104 @@
-.addition {
+@media screen and (min-device-aspect-ratio: 4/3)  and (orientation: landscape) {
+    ion-content.addition {
+        background: url("../images/themes/blackboard/background.png");
+        background-size: cover;
 
-
-    @media screen and (device-aspect-ratio: 4/3)  and (orientation: landscape) {
-        ion-content {
-            background: url("../images/themes/clouds/background.png");
-            background-size: cover;
-
-            scroll-content {
-                overflow: hidden;
-            }
+        scroll-content {
+            overflow: hidden;
         }
+
+    }
+    .addition {
         .exercise {
             width: 60%;
-            margin-left: 40%;
+            margin-left: 20%;
+            text-align: center;
+            margin-top: 100px;
 
-            .number, .letter {
+            .letter, .number {
                 width: 15%;
                 display: inline-block;
+                margin: 0 2px;
+
+                &.double-digit {
+                    //width: 30%;
+                }
+            }
+        }
+
+
+
+        .suggestions {
+            margin: 40px auto 20px;
+
+            .letters-container {
+                text-align: center;
+
+                number {
+                    .number {
+                        width: 6%;
+                        display: inline-block;
+                        margin: 4px 1%;
+                        background-image: url("../images/themes/blackboard/letters/frame.png");
+                        background-repeat: no-repeat;
+                        background-size: contain;
+
+                        &.double-digit {
+                            //width: 12%;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .buttons {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (min-device-aspect-ratio: 16/10) and (orientation: landscape) {
+    ion-content.addition {
+        background: url("../images/themes/blackboard/background_phone.png");
+        background-size: cover;
+
+        scroll-content {
+            overflow: hidden;
+        }
+    }
+    .addition {
+        .image {
+            img {
+                width: 50%;
+                margin-left: 25%;
+                margin-top: -2%;
+            }
+
+        }
+
+
+        .result {
+            margin: -10px auto 10px;
+
+            .letters-container {
+                text-align: center;
+                height: 5%;
+
+                &.completed {
+                    animation: success-spelling 0.3s infinite;
+                }
+
+                .letter {
+                    width: 10%;
+                    display: inline-block;
+                    margin: 0 2px;
+                }
             }
         }
 
         .suggestions {
-            margin: 40px auto 20px;
+            margin: 20px auto 20px;
 
             .letters-container {
                 text-align: center;
@@ -31,13 +108,14 @@
                         width: 6%;
                         display: inline-block;
                         margin: 4px 1%;
-                        border: 2px solid $frame-orange;
-                        background-color: rgba(255,255,255,0.7);
+                        background-image: url("../images/themes/blackboard/letters/frame.png");
+                        background-size: contain;
+                        background-repeat: no-repeat;
                     }
 
                     &.used {
                         .letter {
-                            background-color: rgba(245,133,56,0.7);
+                            background-image: url("../images/themes/blackboard/letters/frame_selected.png");
                         }
                     }
                 }
@@ -49,48 +127,4 @@
         }
     }
 
-    @media screen and (min-device-aspect-ratio: 16/10) and (orientation: landscape) {
-        ion-content {
-            background: url("../images/themes/clouds/background_phone.png");
-            background-size: cover;
-
-            scroll-content {
-                overflow: hidden;
-            }
-        }
-        .exercise {
-            width: 60%;
-            margin-left: 30%;
-        }
-
-        .suggestions {
-            float: right;
-            width: 3%;
-            margin-right: 1%;
-            margin-top: -49%;
-
-            .letters-container {
-                text-align: center;
-
-                letter {
-                    .letter {
-                        display: inline-block;
-                        margin: 4px 1%;
-                        border: 2px solid $frame-orange;
-                        background-color: rgba(255,255,255,0.7);
-                    }
-
-                    &.used {
-                        .letter {
-                            background-color: rgba(245,133,56,0.7);
-                        }
-                    }
-                }
-            }
-        }
-
-        .buttons {
-            text-align: center;
-        }
-    }
 }
