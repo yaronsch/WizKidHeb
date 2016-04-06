@@ -7,7 +7,7 @@ import {ViewEncapsulation} from "angular2/core";
     template: `
     <div class="number" [ngClass]="{'single-digit': digits && digits.length === 1, 'double-digit': digits && digits.length === 2}">
         <span *ngIf="digits" ><img *ngFor="#digit of digits" src="build/images/themes/{{theme}}/letters/{{digit}}.png"/></span>
-        <img *ngIf="!value" class="blank-number" src="build/images/themes/{{theme}}/letters/line.png"/>        
+        <img *ngIf="!value && value !== 0" class="blank-number" src="build/images/themes/{{theme}}/letters/line.png"/>        
     </div>
     `,
     encapsulation: ViewEncapsulation.None
