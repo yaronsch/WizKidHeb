@@ -1,6 +1,6 @@
 import {Page, NavController} from 'ionic-angular';
 import {DataService} from "../../services/data-service";
-import {SpellingPage} from "../spelling/spelling";
+import {SpellingPage} from "./spelling/spelling";
 
 
 @Page({

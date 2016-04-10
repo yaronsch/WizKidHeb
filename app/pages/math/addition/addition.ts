@@ -1,8 +1,9 @@
 import {Page, NavController} from 'ionic-angular';
-import {DataService} from "../../services/data-service";
-import {ShuffleArray} from "../../pipes/shuffle";
-import {Letter} from "../../components/letter/letter";
-import {Number} from "../../components/number/number";
+import {Letter} from "../../../components/letter/letter";
+import {ShuffleArray} from "../../../pipes/shuffle";
+import {DataService} from "../../../services/data-service";
+import {Number} from "../../../components/number/number";
+
 const MAX: number = 99;
 const MIX__IT_UP: number = 20;
 const MIN_MAX_RATIO: number = 0.4;

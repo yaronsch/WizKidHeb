@@ -1,8 +1,8 @@
 import {Page, NavController} from 'ionic-angular';
-import {DataService} from "../../services/data-service";
-import {Letter} from "../../components/letter/letter";
-import {TextDirection} from "../../pipes/direction";
-import {ShuffleArray} from "../../pipes/shuffle";
+import {Letter} from "../../../components/letter/letter";
+import {ShuffleArray} from "../../../pipes/shuffle";
+import {TextDirection} from "../../../pipes/direction";
+import {DataService} from "../../../services/data-service";
 
 const NUM_SUGGESTIONS: number = 8;
 

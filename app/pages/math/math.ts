@@ -1,6 +1,6 @@
 import {Page, NavController} from 'ionic-angular';
 import {DataService} from "../../services/data-service";
-import {AdditionPage} from "../addition/addition";
+import {AdditionPage} from "./addition/addition";
 
 @Page({
     templateUrl: 'build/pages/math/math.html',

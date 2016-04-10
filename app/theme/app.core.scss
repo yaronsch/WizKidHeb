@@ -10,8 +10,8 @@
 @import '../pages/home/home';
 @import '../pages/words/words';
 @import '../pages/math/math';
-@import '../pages/spelling/spelling';
-@import '../pages/addition/addition';
+@import '../pages/words/spelling/spelling';
+@import '../pages/math/addition/addition';
 
 @media screen and (min-aspect-ratio: 4/3)  and (orientation: landscape) {
     ion-content {
