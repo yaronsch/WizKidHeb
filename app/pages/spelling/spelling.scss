@@ -14,7 +14,7 @@ $frame-orange: #F58538;
         border: 2px solid transparent;
     }
 }
-@media screen and (min-device-aspect-ratio: 4/3)  and (orientation: landscape) {
+@media screen and (min-aspect-ratio: 4/3)  and (orientation: landscape) {
     ion-content.spelling {
         background: url("../images/themes/blackboard/background.png");
         background-size: cover;
@@ -83,7 +83,7 @@ $frame-orange: #F58538;
     }
 }
 
-@media screen and (min-device-aspect-ratio: 16/10) and (orientation: landscape) {
+@media screen and (min-aspect-ratio: 16/10) and (orientation: landscape) {
     ion-content.spelling {
         background: url("../images/themes/blackboard/background_phone.png");
         background-size: cover;

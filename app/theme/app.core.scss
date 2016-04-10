@@ -13,13 +13,13 @@
 @import '../pages/spelling/spelling';
 @import '../pages/addition/addition';
 
-@media screen and (min-device-aspect-ratio: 4/3)  and (orientation: landscape) {
+@media screen and (min-aspect-ratio: 4/3)  and (orientation: landscape) {
     ion-content {
         background: url("../images/themes/clouds/background.png");
     }
 }
 
-@media screen and (min-device-aspect-ratio: 16/10) and (orientation: landscape) {
+@media screen and (min-aspect-ratio: 16/10) and (orientation: landscape) {
     ion-content {
         background: url("../images/themes/clouds/background_phone.png");
     }

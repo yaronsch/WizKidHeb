@@ -6,7 +6,8 @@ import {ViewEncapsulation} from "angular2/core";
     selector: 'number',
     template: `
     <div class="number" [ngClass]="{'single-digit': digits && digits.length === 1, 'double-digit': digits && digits.length === 2}">
-        <span *ngIf="digits" ><img *ngFor="#digit of digits" src="build/images/themes/{{theme}}/letters/{{digit}}.png"/></span>
+        <span *ngIf="digits" ><img *ngIf="frame" class="frame" src="build/images/themes/{{theme}}/letters/frame.png">
+        <img *ngFor="#digit of digits" src="build/images/themes/{{theme}}/letters/{{digit}}.png"/></span>
         <img *ngIf="!value && value !== 0" class="blank-number" src="build/images/themes/{{theme}}/letters/line.png"/>        
     </div>
     `,
@@ -15,6 +16,7 @@ import {ViewEncapsulation} from "angular2/core";
 export class Number {
     @Input() value: string;
     @Input() theme: string;
+    @Input() frame: boolean;
     digits :string[];
     constructor() {
 
