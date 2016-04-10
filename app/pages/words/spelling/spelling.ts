@@ -7,7 +7,7 @@ import {DataService} from "../../../services/data-service";
 const NUM_SUGGESTIONS: number = 8;
 
 @Page({
-    templateUrl: 'build/pages/spelling/spelling.html',
+    templateUrl: 'build/pages/words/spelling/spelling.html',
     directives: [Letter],
     pipes: [TextDirection, ShuffleArray]
 })

@@ -10,11 +10,11 @@ const MIN_MAX_RATIO: number = 0.4;
 const NUM_SUGGESTIONS: number = 4;
 
 @Page({
-  templateUrl: 'build/pages/math/addition/addition.html',
+  templateUrl: 'build/pages/math/subtraction/subtraction.html',
     directives: [Letter, Number],
     pipes: [ShuffleArray]
 })
-export class AdditionPage {
+export class SubtractionPage {
     gameData: any;
     max: number = 5;
     min = 2;
@@ -82,14 +82,14 @@ export class AdditionPage {
     }
 
     generateNumbers() {
-        let target = Math.round(Math.random() * (this.max - this.min)) + this.min;
-        let a = Math.ceil(Math.random() * (target - (this.max >= MIX__IT_UP ? 0 : 1)));
-        let b = target - a;
+        let a = Math.round(Math.random() * (this.max - this.min)) + this.min;
+        let b = Math.ceil(Math.random() * (a - (this.max >= MIX__IT_UP ? 0 : 1)));
+        let target = a - b;
         let nums = {a, b, target};
         while (nums.a === this.exNumbers.a && nums.b === this.exNumbers.b) {
-            target = Math.round(Math.random() * (this.max - this.min)) + this.min;
-            a = Math.ceil(Math.random() * (target - (this.max >= MIX__IT_UP ? 0 : 1)));
-            b = target - a;
+            a = Math.round(Math.random() * (this.max - this.min)) + this.min;
+            b = Math.ceil(Math.random() * (a - (this.max >= MIX__IT_UP ? 0 : 1)));
+            target = a - b;
             nums = {a, b, target};
         }
         return nums;
