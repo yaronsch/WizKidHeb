@@ -36,9 +36,13 @@
             height: 100%;
         }
 
+        .count-row {
+            height: 15%;
+        }
+
         .count-items {
             width: 90%;
-            height: 50%;
+            height: 60%;
             margin-left: 5%;
             text-align: center;
             margin-top: 60px;
@@ -136,6 +140,39 @@
         scroll-content {
             overflow: hidden;
         }
+    }
+
+    ion-content.counting {
+        background: url("../images/themes/blackboard/background_phone.png");
+        background-size: cover;
+
+        scroll-content {
+            overflow: hidden;
+        }
+
+        .wrapper {
+            height: 100%;
+        }
+
+        .count-row {
+            height: 22%;
+        }
+
+        .count-items {
+            width: 94%;
+            height: 50%;
+            margin-left: 3%;
+            text-align: center;
+            margin-top: 30px;
+
+            .count-cell {
+                display: inline-block;
+                width: 13%;
+                margin-left: -4%;
+                margin-top: -1%;
+            }
+        }
+
     }
 
     .addition, .subtraction, .counting {

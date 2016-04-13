@@ -6,7 +6,7 @@ import {Number} from "../../../components/number/number";
 
 const MAX: number = 50;
 const ITEMS_IN_ROW = 10;
-const NUM_ROWS = 5;
+const NUM_ROWS = 6;
 const MIN_MAX_RATIO: number = 0.4;
 const NUM_SUGGESTIONS: number = 4;
 
@@ -35,15 +35,12 @@ export class CountingPage {
     }
 
     generateExercise() {
-        //target
-        let target = Math.ceil(Math.random() * (this.max - this.min)) + this.min;
-        while (target === this.result) {
-            target = Math.ceil(Math.random() * (this.max - this.min)) + this.min;
-        }
-        this.result = target;
+        //target             
+        this.result = Math.ceil(Math.random() * (this.max - this.min)) + this.min;
         //image
         let index = Math.floor(Math.random() * this.gameData.data.items.length);
         this.picture = this.gameData.data.items[index];
+        //matrix
         this.generateMatrix();
     }
 
@@ -52,17 +49,17 @@ export class CountingPage {
         for (let i=0; i<NUM_ROWS; i++) {
             let row = [];
             for (let j=0; j<ITEMS_IN_ROW; j++) {
-                row.push(this.result < MAX/2 ? false : true);
+                row.push(this.result < NUM_ROWS*ITEMS_IN_ROW/2 ? false : true);
             }
             mat.push(row);
         }
-        if (this.result < MAX/2) {
+        if (this.result < NUM_ROWS*ITEMS_IN_ROW/2) {
             for (let i=0; i<this.result; i++) {
                 this.markUnusedSpot(mat, false);
             }
         }
         else {
-            for (let i=MAX-1; i>=this.result; i--) {
+            for (let i=NUM_ROWS*ITEMS_IN_ROW; i>this.result; i--) {
                 this.markUnusedSpot(mat, true);
             }
         }
