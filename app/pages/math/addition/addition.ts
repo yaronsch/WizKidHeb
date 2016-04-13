@@ -17,7 +17,7 @@ const NUM_SUGGESTIONS: number = 4;
 export class AdditionPage {
     gameData: any;
     max: number = 5;
-    min = 2;
+    min: number = 2;
     exNumbers: any = {a: 0, b: 0};
     suggestions: string[];
 

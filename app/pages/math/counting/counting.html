@@ -1,0 +1,27 @@
+<div class="top-buttons">
+    <button (click)="goBack()"><img src="build/images/buttons/back.png">חזרה </button>
+</div>
+
+<ion-content padding class="counting">
+    <div *ngIf="matrix" class="wrapper">
+        <div class="count-items">
+            <div class="count-row" *ngFor="#row of matrix; #i = index">
+                <span class="count-cell" *ngFor="#column of row; #j = index">
+                    <img *ngIf="matrix[i][j]" src="build/images/{{picture}}.png">
+                </span>
+            </div>
+        </div >
+
+        <div class="suggestions" *ngIf="suggestions">
+            <div class="letters-container">
+                <number *ngFor="#s of suggestions | shuffle" [value]="s"
+                        (click)="numberClicked($event, s)" [theme]="'blackboard'" [frame]="true"></number>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button (click)="nextExercise()">התרגיל הבא</button>
+        </div>
+    </div>
+
+</ion-content>

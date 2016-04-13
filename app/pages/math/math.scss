@@ -16,7 +16,7 @@
 
 @media screen and (min-aspect-ratio: 4/3)  and (orientation: landscape) {
     ion-content.addition, ion-content.subtraction {
-        background: url("../images/themes/blackboard/background.png");
+        background: url("../images/themes/blackboard/math-board-background.png");
         background-size: cover;
 
         scroll-content {
@@ -24,7 +24,35 @@
         }
 
     }
-    .addition, .subtraction {
+    ion-content.counting {
+        background: url("../images/themes/blackboard/background.png");
+        background-size: cover;
+
+        scroll-content {
+            overflow: hidden;
+        }
+
+        .wrapper {
+            height: 100%;
+        }
+
+        .count-items {
+            width: 90%;
+            height: 50%;
+            margin-left: 5%;
+            text-align: center;
+            margin-top: 60px;
+
+            .count-cell {
+                display: inline-block;
+                width: 14%;
+                margin-left: -4%;
+                margin-top: -1%;
+            }
+        }
+
+    }
+    .addition, .subtraction, .counting {
         .exercise {
             width: 80%;
             margin-left: 10%;
@@ -101,7 +129,7 @@
 }
 
 @media screen and (min-aspect-ratio: 16/10) and (orientation: landscape) {
-    ion-content.addition, ion-content.subtraction{
+    ion-content.addition, ion-content.subtraction, ion-content.counting {
         background: url("../images/themes/blackboard/background_phone.png");
         background-size: cover;
 
@@ -109,7 +137,8 @@
             overflow: hidden;
         }
     }
-    .addition, .subtraction {
+
+    .addition, .subtraction, .counting {
         .exercise {
             width: 80%;
             margin-left: 10%;

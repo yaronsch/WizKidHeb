@@ -13,12 +13,12 @@
               {
                 "name": "alligator",
                 "spelling": "תנין",
-                "image": "images/aligator.png"
+                "image": "images/alligator.png"
               },
               {
                 "name": "balloon",
                 "spelling": "בלון",
-                "image": "images/baloon.png"
+                "image": "images/balloon.png"
               },
               {
                 "name": "ball",
@@ -191,10 +191,20 @@
       "games": [
         {
           "id": 1,
-          "title": "חיבור"
+          "title": "מניה",
+          "data": {
+            "items": [
+              "alligator", "basketball", "boat", "car", "carrot", "cat", "fish", "helicopter",
+              "Itamar", "lightbulb", "lion", "owl", "plane", "rhino", "rocket", "sheep", "ship", "sun", "turtle"
+            ]
+          }
         },
         {
           "id": 2,
+          "title": "חיבור"
+        },
+        {
+          "id": 3,
           "title": "חיסור"
         }
       ]

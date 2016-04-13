@@ -2,6 +2,7 @@ import {Page, NavController} from 'ionic-angular';
 import {DataService} from "../../services/data-service";
 import {AdditionPage} from "./addition/addition";
 import {SubtractionPage} from "./subtraction/subtraction";
+import {CountingPage} from "./counting/counting";
 
 @Page({
     templateUrl: 'build/pages/math/math.html',
@@ -17,9 +18,12 @@ export class MathPage {
     launchGame(game) {
         switch (game.id) {
             case 1:
-                this.nav.push(AdditionPage);
+                this.nav.push(CountingPage);
                 break;
             case 2:
+                this.nav.push(AdditionPage);
+                break;
+            case 3:
                 this.nav.push(SubtractionPage);
                 break;
 
