@@ -2,6 +2,7 @@ import {Page, NavController} from 'ionic-angular';
 import {ShuffleArray} from "../../../pipes/shuffle";
 import {DataService} from "../../../services/data-service";
 import {Number} from "../../../components/number/number";
+import {Hud} from "../../../components/hud/hud";
 
 
 const MAX: number = 50;
@@ -12,7 +13,7 @@ const NUM_SUGGESTIONS: number = 4;
 
 @Page({
     templateUrl: 'build/pages/math/counting/counting.html',
-    directives: [Number],
+    directives: [Number, Hud],
     pipes: [ShuffleArray]
 })
 export class CountingPage {
@@ -106,10 +107,5 @@ export class CountingPage {
 
     onComplete() {
         setTimeout(() => {this.nextExercise();}, 1000);
-    }
-
-
-    goBack() {
-        this.nav.pop();
     }
 }

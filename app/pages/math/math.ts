@@ -3,9 +3,11 @@ import {DataService} from "../../services/data-service";
 import {AdditionPage} from "./addition/addition";
 import {SubtractionPage} from "./subtraction/subtraction";
 import {CountingPage} from "./counting/counting";
+import {Hud} from "../../components/hud/hud";
 
 @Page({
     templateUrl: 'build/pages/math/math.html',
+    directives: [Hud]
 })
 export class MathPage {
     private menuData;
@@ -28,9 +30,5 @@ export class MathPage {
                 break;
 
         }
-    }
-
-    goBack() {
-        this.nav.pop();
     }
 }

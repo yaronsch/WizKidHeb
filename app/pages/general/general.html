@@ -1,6 +1,6 @@
 <hud></hud>
 
-<ion-content class="words" *ngIf="menuData">
+<ion-content class="general" *ngIf="menuData">
     <div class="cards">
         <ion-card *ngFor="#game of menuData.games" (click)="launchGame(game)">
             {{game.title}}

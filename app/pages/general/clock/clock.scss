@@ -1,0 +1,46 @@
+@media screen and (min-aspect-ratio: 4/3)  and (orientation: landscape) {
+    ion-content.clock {
+        &.day {
+            background: url("../images/time/day-background.png");
+            background-size: cover;
+        }
+
+        &.night {
+            background: url("../images/time/night-background.png");
+            background-size: cover;
+        }
+
+
+
+        scroll-content {
+            overflow: hidden;
+        }
+
+    }
+
+    .clock {
+
+    }
+}
+
+@media screen and (min-aspect-ratio: 16/10) and (orientation: landscape) {
+    ion-content.clock {
+        &.day {
+            background: url("../images/time/phone-day.png");
+            background-size: cover;
+        }
+
+        &.night {
+            background: url("../images/time/phone-night.png");
+            background-size: cover;
+        }
+
+        scroll-content {
+            overflow: hidden;
+        }
+    }
+
+    .clock {
+
+    }
+}

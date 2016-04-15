@@ -1,6 +1,4 @@
-<div class="top-buttons">
-  <button (click)="goBack()"><img src="build/images/buttons/back.png">חזרה </button>
-</div>
+<hud></hud>
 <ion-content class="words" *ngIf="menuData">
   <div class="cards">
     <ion-card *ngFor="#game of menuData.games" (click)="launchGame(game)">

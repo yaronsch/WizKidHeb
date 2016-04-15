@@ -3,6 +3,7 @@ import {Letter} from "../../../components/letter/letter";
 import {ShuffleArray} from "../../../pipes/shuffle";
 import {DataService} from "../../../services/data-service";
 import {Number} from "../../../components/number/number";
+import {Hud} from "../../../components/hud/hud";
 
 const MAX: number = 99;
 const MIX__IT_UP: number = 25;
@@ -11,7 +12,7 @@ const NUM_SUGGESTIONS: number = 4;
 
 @Page({
   templateUrl: 'build/pages/math/subtraction/subtraction.html',
-    directives: [Letter, Number],
+    directives: [Letter, Number, Hud],
     pipes: [ShuffleArray]
 })
 export class SubtractionPage {
@@ -93,9 +94,5 @@ export class SubtractionPage {
             nums = {a, b, target};
         }
         return nums;
-    }
-
-    goBack() {
-        this.nav.pop();
     }
 }

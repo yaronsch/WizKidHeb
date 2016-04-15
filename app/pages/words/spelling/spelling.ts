@@ -3,12 +3,13 @@ import {Letter} from "../../../components/letter/letter";
 import {ShuffleArray} from "../../../pipes/shuffle";
 import {TextDirection} from "../../../pipes/direction";
 import {DataService} from "../../../services/data-service";
+import {Hud} from "../../../components/hud/hud";
 
 const NUM_SUGGESTIONS: number = 8;
 
 @Page({
     templateUrl: 'build/pages/words/spelling/spelling.html',
-    directives: [Letter],
+    directives: [Letter, Hud],
     pipes: [TextDirection, ShuffleArray]
 })
 export class SpellingPage {
@@ -71,10 +72,6 @@ export class SpellingPage {
 
     onComplete() {
         setTimeout(() => {this.nextWord()}, 1000);
-    }
-
-    goBack() {
-        this.nav.pop();
     }
 
 }

@@ -11,7 +11,9 @@
 @import '../pages/words/words';
 @import '../pages/math/math';
 @import '../pages/words/spelling/spelling';
-
+@import '../pages/general/general';
+@import '../components/hud/hud';
+@import '../pages/general/clock/clock';
 
 @media screen and (min-aspect-ratio: 4/3)  and (orientation: landscape) {
     ion-content {
@@ -33,34 +35,4 @@ ion-content {
     }
 }
 
-ion-icon.back-button-icon.ion-ios-custom-back:before {
-    background-image: url("../images/buttons/back.png");
-    background-position: center;
-    background-size: cover;
-    content: 'xxxx';
-    color: transparent;
-}
 
-.back-button-text .back-default {
-    color: $frame-orange;
-}
-
-ion-page {
-    div.top-buttons {
-        position: absolute;
-        z-index: 2;
-
-        button {
-            background-color: transparent;
-            color: $frame-orange;
-
-            &.activated {
-                background-color: transparent;
-            }
-
-            img {
-                width: 50px;
-            }
-        }
-    }
-}
