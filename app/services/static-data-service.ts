@@ -3,7 +3,7 @@ import {Http} from "angular2/http";
 declare var fetch;
 
 @Injectable()
-export class DataService {
+export class StaticDataService {
     public data: any;
     constructor(private http: Http) {
         http.get('build/config/config.json').subscribe(data => {

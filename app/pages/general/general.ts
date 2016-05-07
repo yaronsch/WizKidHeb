@@ -1,7 +1,7 @@
 import {Page, NavController} from 'ionic-angular';
-import {DataService} from "../../services/data-service";
 import {ClockPage} from "./clock/clock";
 import {Hud} from "../../components/hud/hud";
+import {StaticDataService} from "../../services/static-data-service";
 
 
 @Page({
@@ -10,7 +10,7 @@ import {Hud} from "../../components/hud/hud";
 })
 export class GeneralKnowledgePage {
     private menuData;
-    constructor(private nav: NavController, private dataService: DataService) {
+    constructor(private nav: NavController, private dataService: StaticDataService) {
         this.nav = nav;
         this.menuData = dataService.data.menu[2];
     }

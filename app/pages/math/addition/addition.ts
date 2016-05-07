@@ -1,9 +1,9 @@
 import {Page, NavController} from 'ionic-angular';
 import {Letter} from "../../../components/letter/letter";
 import {ShuffleArray} from "../../../pipes/shuffle";
-import {DataService} from "../../../services/data-service";
 import {Number} from "../../../components/number/number";
 import {Hud} from "../../../components/hud/hud";
+import {StaticDataService} from "../../../services/static-data-service";
 
 const MAX: number = 99;
 const MIX__IT_UP: number = 25;
@@ -22,7 +22,7 @@ export class AdditionPage {
     exNumbers: any = {a: 0, b: 0};
     suggestions: string[];
 
-    constructor(private dataService: DataService, private nav: NavController) {
+    constructor(private dataService: StaticDataService, private nav: NavController) {
         this.gameData = dataService.data.menu[1].games[0];
         this.nextExercise();
     }

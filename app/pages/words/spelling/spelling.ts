@@ -2,8 +2,8 @@ import {Page, NavController} from 'ionic-angular';
 import {Letter} from "../../../components/letter/letter";
 import {ShuffleArray} from "../../../pipes/shuffle";
 import {TextDirection} from "../../../pipes/direction";
-import {DataService} from "../../../services/data-service";
 import {Hud} from "../../../components/hud/hud";
+import {StaticDataService} from "../../../services/static-data-service";
 
 const NUM_SUGGESTIONS: number = 8;
 
@@ -21,8 +21,8 @@ export class SpellingPage {
     suggestions = [];
     result = [];
     private availableWords = [];
-    constructor(private dataService: DataService, private nav: NavController) {
-        this.gameData = dataService.data.menu[0].games[0];
+    constructor(private staticDataService: StaticDataService, private nav: NavController) {
+        this.gameData = staticDataService.data.menu[0].games[0];
         this.nextWord();
     }
 
@@ -42,8 +42,8 @@ export class SpellingPage {
     generateSuggestions() {
         let fakeLetters = new Array(NUM_SUGGESTIONS - this.currentWord.spelling.length);
         for (let i=0; i<fakeLetters.length; i++) {
-            let index = Math.floor(Math.random() * Object.keys(this.dataService.data.letters).length);
-            fakeLetters[i] = {value:  Object.keys(this.dataService.data.letters)[index], used: false};
+            let index = Math.floor(Math.random() * Object.keys(this.staticDataService.data.letters).length);
+            fakeLetters[i] = {value:  Object.keys(this.staticDataService.data.letters)[index], used: false};
         }
 
         this.suggestions = this.currentWordSpelling.map(l => {

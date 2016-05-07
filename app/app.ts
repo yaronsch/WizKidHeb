@@ -1,16 +1,16 @@
 import {App, Platform} from 'ionic-angular';
 import {HomePage} from './pages/home/home';
-import {DataService} from './services/data-service';
 
 // https://angular.io/docs/ts/latest/api/core/Type-interface.html
 
 import {HTTP_PROVIDERS} from "angular2/http";
 import {StatusBar} from "ionic-native";
+import {StaticDataService} from "./services/static-data-service";
 
 
 @App({
   template: '<ion-nav [root]="rootPage"></ion-nav>',
-  providers: [DataService, HTTP_PROVIDERS],
+  providers: [StaticDataService, HTTP_PROVIDERS],
   config: {
     backButtonText: 'חזרה',
     backButtonIcon: 'custom-back',

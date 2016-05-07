@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation} from "angular2/core";
+import {Component, ViewEncapsulation, Input} from "angular2/core";
 import {NavController} from "ionic-angular";
 
 @Component({
@@ -14,6 +14,7 @@ import {NavController} from "ionic-angular";
     encapsulation: ViewEncapsulation.None
 })
 export class Hud {
+    @Input() level: number[];
     constructor(private nav: NavController) {}
 
     goBack() {
