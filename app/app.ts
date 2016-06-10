@@ -1,23 +1,17 @@
-import {App, Platform} from 'ionic-angular';
+import {Platform, ionicBootstrap} from 'ionic-angular';
 import {HomePage} from './pages/home/home';
+import {Component} from '@angular/core';
 
-// https://angular.io/docs/ts/latest/api/core/Type-interface.html
-
-import {HTTP_PROVIDERS} from "angular2/http";
+import {HTTP_PROVIDERS} from "@angular/http";
 import {StatusBar} from "ionic-native";
 import {StaticDataService} from "./services/static-data-service";
 import {StorageService} from "./services/storage-service";
 import {PlayerDataService} from "./services/player-data-service";
 
 
-@App({
+@Component({
   template: '<ion-nav [root]="rootPage"></ion-nav>',
-  providers: [StaticDataService, StorageService, HTTP_PROVIDERS],
-  config: {
-    backButtonText: 'חזרה',
-    backButtonIcon: 'custom-back',
-    mode: 'ios'
-  } // http://ionicframework.com/docs/v2/api/config/Config/
+  providers: [StaticDataService, StorageService, HTTP_PROVIDERS]
 })
 export class MyApp {
   rootPage: any = HomePage;
@@ -30,3 +24,9 @@ export class MyApp {
     });
   }
 }
+ionicBootstrap(MyApp, [], {
+    backButtonText: 'חזרה',
+        backButtonIcon: 'custom-back',
+        mode: 'ios'
+});
+// http://ionicframework.com/docs/v2/api/config/Config/

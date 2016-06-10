@@ -1,6 +1,6 @@
-import {Component, SimpleChange} from 'angular2/core';
-import {Input} from "angular2/core";
-import {ViewEncapsulation} from "angular2/core";
+import {Component, SimpleChange} from '@angular/core';
+import {Input} from "@angular/core";
+import {ViewEncapsulation} from "@angular/core";
 
 @Component({
     selector: 'number',

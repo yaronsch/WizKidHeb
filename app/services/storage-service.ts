@@ -1,4 +1,4 @@
-import {Injectable} from "angular2/core";
+import {Injectable} from "@angular/core";
 import {SqlStorage, Storage} from "ionic-angular";
 
 const DB_NAME = "wizkid_storage";
@@ -8,7 +8,7 @@ export class StorageService {
     public data: any;
 
     constructor() {
-        this.storage = new Storage(SqlStorage, DB_NAME);
+        this.storage = new Storage(SqlStorage, {name: DB_NAME});
         this.storage.get('data').then(data => {
             if (data) {
                 this.data = JSON.parse(data);
