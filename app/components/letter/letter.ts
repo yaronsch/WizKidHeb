@@ -1,7 +1,7 @@
-import {Component} from 'angular2/core';
-import {Input} from "angular2/core";
-import {Output} from "angular2/core";
-import {ViewEncapsulation} from "angular2/core";
+import {Component} from '@angular/core';
+import {Input} from "@angular/core";
+import {Output} from "@angular/core";
+import {ViewEncapsulation} from "@angular/core";
 
 @Component({
     selector: 'letter',

@@ -1,9 +1,8 @@
-import {Injectable} from "angular2/core";
-import {Http} from "angular2/http";
-declare var fetch;
+import {Injectable} from "@angular/core";
+import {Http} from "@angular/http";
 
 @Injectable()
-export class DataService {
+export class StaticDataService {
     public data: any;
     constructor(private http: Http) {
         http.get('build/config/config.json').subscribe(data => {

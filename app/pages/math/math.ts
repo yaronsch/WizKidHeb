@@ -1,9 +1,9 @@
 import {Page, NavController} from 'ionic-angular';
-import {DataService} from "../../services/data-service";
 import {AdditionPage} from "./addition/addition";
 import {SubtractionPage} from "./subtraction/subtraction";
 import {CountingPage} from "./counting/counting";
 import {Hud} from "../../components/hud/hud";
+import {StaticDataService} from "../../services/static-data-service";
 
 @Page({
     templateUrl: 'build/pages/math/math.html',
@@ -12,7 +12,7 @@ import {Hud} from "../../components/hud/hud";
 export class MathPage {
     private menuData;
 
-    constructor(private nav:NavController, private dataService:DataService) {
+    constructor(private nav:NavController, private dataService:StaticDataService) {
         this.nav = nav;
         this.menuData = dataService.data.menu[1];
     }

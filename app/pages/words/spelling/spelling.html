@@ -1,4 +1,4 @@
-<hud></hud>
+<hud [playerData]="playerData"></hud>
 <ion-content padding class="spelling">
     <div *ngIf="currentWord">
         <div class="image">
@@ -7,12 +7,12 @@
         <div class="result" *ngIf="result">
             <div class="letters-container" [ngClass]="{completed: currentIndex === currentWordSpelling.length}">
                 <letter *ngFor="#l of result | direction:gameData.data.direction"
-                        [image]="dataService.data.letters[l]" [theme]="'blackboard'"></letter>
+                        [image]="staticDataService.data.letters[l]" [theme]="'blackboard'"></letter>
             </div>
         </div>
         <div class="suggestions" *ngIf="suggestions">
             <div class="letters-container">
-                <letter *ngFor="#l of suggestions | shuffle" [image]="dataService.data.letters[l.value]"
+                <letter *ngFor="#l of suggestions | shuffle" [image]="staticDataService.data.letters[l.value]"
                         (click)="letterClicked($event, l)" [ngClass]="{used: l.used}"
                         [theme]="'blackboard'" ></letter>
             </div>

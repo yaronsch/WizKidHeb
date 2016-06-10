@@ -1,28 +1,33 @@
-import {Page, NavController} from 'ionic-angular';
+import {Page} from 'ionic-angular';
 import {Letter} from "../../../components/letter/letter";
 import {ShuffleArray} from "../../../pipes/shuffle";
 import {TextDirection} from "../../../pipes/direction";
-import {DataService} from "../../../services/data-service";
 import {Hud} from "../../../components/hud/hud";
+import {StaticDataService} from "../../../services/static-data-service";
+import {PlayerDataService} from "../../../services/player-data-service";
 
 const NUM_SUGGESTIONS: number = 8;
+const CATEGORY = 0;
+const GAME = 0;
 
 @Page({
     templateUrl: 'build/pages/words/spelling/spelling.html',
     directives: [Letter, Hud],
-    pipes: [TextDirection, ShuffleArray]
+    pipes: [TextDirection, ShuffleArray],
+    providers: [PlayerDataService]
 })
 export class SpellingPage {
 
-    gameData: any;
+    gameData: any;    
     currentWord: any;
     currentIndex:number;
     currentWordSpelling: string[];
     suggestions = [];
     result = [];
     private availableWords = [];
-    constructor(private dataService: DataService, private nav: NavController) {
-        this.gameData = dataService.data.menu[0].games[0];
+    constructor(private staticDataService: StaticDataService, private playerData: PlayerDataService) {
+        this.gameData = staticDataService.data.menu[CATEGORY].games[GAME];
+        this.playerData.setGameData(CATEGORY, GAME);
         this.nextWord();
     }
 
@@ -42,8 +47,8 @@ export class SpellingPage {
     generateSuggestions() {
         let fakeLetters = new Array(NUM_SUGGESTIONS - this.currentWord.spelling.length);
         for (let i=0; i<fakeLetters.length; i++) {
-            let index = Math.floor(Math.random() * Object.keys(this.dataService.data.letters).length);
-            fakeLetters[i] = {value:  Object.keys(this.dataService.data.letters)[index], used: false};
+            let index = Math.floor(Math.random() * Object.keys(this.staticDataService.data.letters).length);
+            fakeLetters[i] = {value:  Object.keys(this.staticDataService.data.letters)[index], used: false};
         }
 
         this.suggestions = this.currentWordSpelling.map(l => {

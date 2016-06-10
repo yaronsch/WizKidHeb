@@ -1,14 +1,15 @@
 import {Page, NavController} from 'ionic-angular';
-import {DataService} from '../../services/data-service'
 import {WordsPage} from "../words/words";
 import {MathPage} from "../math/math";
 import {GeneralKnowledgePage} from "../general/general";
+import {StaticDataService} from "../../services/static-data-service";
+import {StorageService} from "../../services/storage-service";
 
 @Page({
     templateUrl: 'build/pages/home/home.html',
 })
 export class HomePage {
-    constructor(private nav: NavController, private dataService: DataService) {
+    constructor(private nav: NavController, private dataService: StaticDataService, storageService: StorageService) {
 
     }
 
