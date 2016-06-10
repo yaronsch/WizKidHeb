@@ -20,7 +20,7 @@ export class StorageService {
     }
 
     getGameData(category: number, game: number): any {
-        if (!this.data[category] || this.data[category][game]) {
+        if (!this.data[category] || !this.data[category][game]) {
             return {level: 1, points: 0};
         }
         else {
@@ -36,6 +36,6 @@ export class StorageService {
             this.data[category][game] = {};
         }
         this.data[category][game] = data;
-        this.storage.set('data', JSON.stringify(data));
+        this.storage.set('data', JSON.stringify(this.data));
     }
 }

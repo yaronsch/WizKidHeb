@@ -6,13 +6,13 @@
         </div >
         <div class="result" *ngIf="result">
             <div class="letters-container" [ngClass]="{completed: currentIndex === currentWordSpelling.length}">
-                <letter *ngFor="#l of result | direction:gameData.data.direction"
+                <letter *ngFor="let l of result | direction:gameData.data.direction"
                         [image]="staticDataService.data.letters[l]" [theme]="'blackboard'"></letter>
             </div>
         </div>
         <div class="suggestions" *ngIf="suggestions">
             <div class="letters-container">
-                <letter *ngFor="#l of suggestions | shuffle" [image]="staticDataService.data.letters[l.value]"
+                <letter *ngFor="let l of suggestions | shuffle" [image]="staticDataService.data.letters[l.value]"
                         (click)="letterClicked($event, l)" [ngClass]="{used: l.used}"
                         [theme]="'blackboard'" ></letter>
             </div>

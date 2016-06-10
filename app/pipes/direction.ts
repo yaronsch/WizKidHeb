@@ -8,8 +8,8 @@ export class TextDirection {
     /*
      Takes an array or string and reverses it
     */
-    transform(value, args) {
-        if (args && args[0] === 'rtl') {
+    transform(value, direction) {
+        if (direction === 'rtl') {
             if (Array.isArray(value)) {
                 return value.slice().reverse();
             }
