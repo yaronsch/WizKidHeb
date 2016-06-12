@@ -1,4 +1,4 @@
-<hud [playerData]="playerData"></hud>
+<hud [playerData]="playerData" [showNextEx]="true" (nextEx)="nextWord()"></hud>
 <ion-content padding class="spelling">
     <div *ngIf="currentWord">
         <div class="image">

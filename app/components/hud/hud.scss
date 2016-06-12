@@ -1,5 +1,6 @@
 ion-page {
     div.top-buttons {
+        width: 100%;
         position: absolute;
         z-index: 2;
 
@@ -15,7 +16,31 @@ ion-page {
                 width: 50px;
             }
         }
+
+        div.level-select {
+            display: inline-block;
+            float: right;
+            width: 12%;
+            margin: 2px 10px;
+
+            ion-item {
+                background: transparent;
+
+                .item-inner {
+                    border: none;
+                }
+
+                ion-select {
+                    padding: 0;
+                    color: $frame-orange;
+                }
+            }
+        }
     }
+}
+
+div.alert-radio-group {
+    overflow: auto;
 }
 
 
