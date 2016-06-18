@@ -21,7 +21,7 @@ export class StorageService {
 
     getGameData(category: number, game: number): any {
         if (!this.data[category] || !this.data[category][game]) {
-            return {level: 1, points: 0};
+            return null;
         }
         else {
             return this.data[category][game];

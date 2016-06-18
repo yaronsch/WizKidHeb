@@ -9,6 +9,7 @@ import {PlayerDataService} from "../../../services/player-data-service";
 const NUM_SUGGESTIONS: number = 8;
 const CATEGORY = 0;
 const GAME = 0;
+const LEVELS_THRESHOLDS = [10, 30];
 
 @Page({
     templateUrl: 'build/pages/words/spelling/spelling.html',
@@ -27,13 +28,13 @@ export class SpellingPage {
     private availableWords = [];
     constructor(private staticDataService: StaticDataService, private playerData: PlayerDataService) {
         this.gameData = staticDataService.data.menu[CATEGORY].games[GAME];
-        this.playerData.setGameData(CATEGORY, GAME);
+        this.playerData.setGameData(CATEGORY, GAME, LEVELS_THRESHOLDS);
         this.nextWord();
     }
 
     nextWord() {
         if (this.availableWords.length === 0) {
-            this.availableWords = this.gameData.data.words.slice(0);
+            this.availableWords = this.gameData.data.words[("level" + this.playerData.level)].slice(0);
         }
         let wordIndex = Math.floor(Math.random() * this.availableWords.length);
         this.currentWord = this.availableWords.splice(wordIndex, 1)[0];
@@ -61,16 +62,22 @@ export class SpellingPage {
             return;
         }
         if (letter.value === this.currentWordSpelling[this.currentIndex]) {
-            //TODO success!!!
+            //TODO letter success!
             this.result[this.currentIndex] = letter.value;
             this.result = this.result.concat();
             letter.used = true;
             this.currentIndex++;
             if (this.currentIndex === this.currentWordSpelling.length) {
+                //TODO work success!!!
+                let levelChanged: boolean = this.playerData.addPoints(1);
+                if (levelChanged) {
+                    this.availableWords = this.gameData.data.words[("level" + this.playerData.level)].slice(0);
+                }
                 this.onComplete();
             }
         }
         else {
+            this.playerData.addPoints(-1);
             //TODO fail :(
         }
     }
@@ -78,5 +85,4 @@ export class SpellingPage {
     onComplete() {
         setTimeout(() => {this.nextWord()}, 1000);
     }
-
 }
