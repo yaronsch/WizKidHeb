@@ -3,8 +3,8 @@
 <ion-content padding class="counting">
     <div *ngIf="matrix" class="wrapper">
         <div class="count-items">
-            <div class="count-row" *ngFor="#row of matrix; #i = index">
-                <span class="count-cell" *ngFor="#column of row; #j = index">
+            <div class="count-row" *ngFor="let row of matrix; let i = index">
+                <span class="count-cell" *ngFor="let column of row; let j = index">
                     <img *ngIf="matrix[i][j]" src="build/images/{{picture}}.png">
                 </span>
             </div>
@@ -12,7 +12,7 @@
 
         <div class="suggestions" *ngIf="suggestions">
             <div class="letters-container">
-                <number *ngFor="#s of suggestions | shuffle" [value]="s"
+                <number *ngFor="let s of suggestions | shuffle" [value]="s"
                         (click)="numberClicked($event, s)" [theme]="'blackboard'" [frame]="true"></number>
             </div>
         </div>

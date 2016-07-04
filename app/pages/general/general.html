@@ -2,7 +2,7 @@
 
 <ion-content class="general" *ngIf="menuData">
     <div class="cards">
-        <ion-card *ngFor="#game of menuData.games" (click)="launchGame(game)">
+        <ion-card *ngFor="let game of menuData.games" (click)="launchGame(game)">
             {{game.title}}
         </ion-card>
     </div>

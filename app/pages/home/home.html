@@ -1,5 +1,5 @@
 <ion-content class="home" *ngIf="dataService.data">
-    <ion-card *ngFor="#subMenu of dataService.data.menu" (click)="launchSubMenu(subMenu)">
+    <ion-card *ngFor="let subMenu of dataService.data.menu" (click)="launchSubMenu(subMenu)">
         {{subMenu.title}}
     </ion-card>
 </ion-content>

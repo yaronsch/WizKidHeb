@@ -9,7 +9,7 @@ import {PlayerDataService} from "../../../services/player-data-service";
 const NUM_SUGGESTIONS: number = 8;
 const CATEGORY = 0;
 const GAME = 0;
-const LEVELS_THRESHOLDS = [10, 30];
+const LEVELS_THRESHOLDS = [25, 50];
 
 @Page({
     templateUrl: 'build/pages/words/spelling/spelling.html',
@@ -34,7 +34,7 @@ export class SpellingPage {
 
     nextWord() {
         if (this.availableWords.length === 0) {
-            this.availableWords = this.gameData.data.words[("level" + this.playerData.level)].slice(0);
+            this.availableWords = this.gameData.data.words.slice(0);
         }
         let wordIndex = Math.floor(Math.random() * this.availableWords.length);
         this.currentWord = this.availableWords.splice(wordIndex, 1)[0];
@@ -67,12 +67,12 @@ export class SpellingPage {
             this.result = this.result.concat();
             letter.used = true;
             this.currentIndex++;
+            let levelChanged: boolean = this.playerData.addPoints(1);
+            if (levelChanged) {
+                this.availableWords = [];
+            }
             if (this.currentIndex === this.currentWordSpelling.length) {
-                //TODO work success!!!
-                let levelChanged: boolean = this.playerData.addPoints(1);
-                if (levelChanged) {
-                    this.availableWords = this.gameData.data.words[("level" + this.playerData.level)].slice(0);
-                }
+                //TODO word success!!!
                 this.onComplete();
             }
         }

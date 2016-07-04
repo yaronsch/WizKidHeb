@@ -12,7 +12,7 @@
 
     <div class="suggestions" *ngIf="suggestions">
       <div class="letters-container">
-        <number *ngFor="#s of suggestions | shuffle" [value]="s"
+        <number *ngFor="let s of suggestions | shuffle" [value]="s"
                 (click)="numberClicked($event, s)" [theme]="'blackboard'" [frame]="true"></number>
       </div>
     </div>

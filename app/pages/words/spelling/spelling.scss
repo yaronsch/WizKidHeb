@@ -16,7 +16,7 @@ $frame-orange: #F58538;
 }
 @media screen and (min-aspect-ratio: 4/3)  and (orientation: landscape) {
     ion-content.spelling {
-        background: url("../images/themes/blackboard/background.png");
+        background: url("../images/themes/notebook/reading-background.png");
         background-size: cover;
 
         scroll-content {
@@ -63,14 +63,14 @@ $frame-orange: #F58538;
                         width: 6%;
                         display: inline-block;
                         margin: 4px 1%;
-                        background-image: url("../images/themes/blackboard/letters/frame.png");
+                        background-image: url("../images/themes/notebook/letters/frame.png");
                         background-repeat: no-repeat;
                         background-size: contain;
                     }
 
                     &.used {
                         .letter {
-                            background-image: url("../images/themes/blackboard/letters/frame_selected.png");
+                            background-image: url("../images/themes/notebook/letters/frame-selected.png");
                         }
                     }
                 }
@@ -85,7 +85,7 @@ $frame-orange: #F58538;
 
 @media screen and (min-aspect-ratio: 16/10) and (orientation: landscape) {
     ion-content.spelling {
-        background: url("../images/themes/blackboard/background_phone.png");
+        background: url("../images/themes/notebook/reading-phone-background.png");
         background-size: cover;
 
         scroll-content {
@@ -133,14 +133,14 @@ $frame-orange: #F58538;
                         width: 6%;
                         display: inline-block;
                         margin: 4px 1%;
-                        background-image: url("../images/themes/blackboard/letters/frame.png");
+                        background-image: url("../images/themes/notebook/letters/frame.png");
                         background-size: contain;
                         background-repeat: no-repeat;
                     }
 
                     &.used {
                         .letter {
-                            background-image: url("../images/themes/blackboard/letters/frame_selected.png");
+                            background-image: url("../images/themes/notebook/letters/frame-selected.png");
                         }
                     }
                 }
