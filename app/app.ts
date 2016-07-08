@@ -11,7 +11,7 @@ import {PlayerDataService} from "./services/player-data-service";
 
 @Component({
   template: '<ion-nav [root]="rootPage"></ion-nav>',
-  providers: [StaticDataService, StorageService, HTTP_PROVIDERS]
+  providers: [StaticDataService, StorageService, PlayerDataService, HTTP_PROVIDERS]
 })
 export class MyApp {
   rootPage: any = HomePage;

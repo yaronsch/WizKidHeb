@@ -1,4 +1,4 @@
-import {Page, NavController} from 'ionic-angular';
+import {Page} from 'ionic-angular';
 import {ShuffleArray} from "../../../pipes/shuffle";
 import {Number} from "../../../components/number/number";
 import {Hud} from "../../../components/hud/hud";
@@ -25,7 +25,7 @@ export class CountingPage {
     matrix: boolean[][];
     suggestions: string[];
 
-    constructor(private dataService: StaticDataService, private nav: NavController) {
+    constructor(private dataService: StaticDataService) {
         this.gameData = dataService.data.menu[1].games[0];
         this.nextExercise();
     }
@@ -56,12 +56,16 @@ export class CountingPage {
         }
         if (this.result < NUM_ROWS*ITEMS_IN_ROW/2) {
             for (let i=0; i<this.result; i++) {
-                this.markUnusedSpot(mat, false);
+                setTimeout(() => {
+                    this.markUnusedSpot(mat, false);
+                },(1000/this.result)*i);
             }
         }
         else {
             for (let i=NUM_ROWS*ITEMS_IN_ROW; i>this.result; i--) {
-                this.markUnusedSpot(mat, true);
+                setTimeout(() => {
+                    this.markUnusedSpot(mat, true);
+                },(1000/this.result)*i);
             }
         }
         this.matrix = mat;

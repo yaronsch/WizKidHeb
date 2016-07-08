@@ -243,7 +243,6 @@
               "basketball",
               "boat",
               "car",
-              "carrot",
               "cat",
               "fish",
               "helicopter",
@@ -257,7 +256,11 @@
               "sheep",
               "ship",
               "sun",
-              "turtle"
+              "turtle",
+              "dino",
+              "flower",
+              "cake",
+              "butterfly"
             ]
           }
         },

@@ -37,7 +37,7 @@ var isRelease = argv.indexOf('--release') > -1;
 
 gulp.task('watch', ['clean'], function(done){
   runSequence(
-      ['sass', 'html', 'fonts', 'copyImages', 'copyConfig', 'scripts'],
+      ['sass', 'html', 'fonts', 'copyCustomFonts', 'copyImages', 'copyConfig', 'scripts'],
       function(){
         gulpWatch('app/**/*.scss', function(){ gulp.start('sass'); });
         gulpWatch('app/**/*.html', function(){ gulp.start('html'); });
@@ -48,7 +48,7 @@ gulp.task('watch', ['clean'], function(done){
 
 gulp.task('build', ['clean'], function(done){
   runSequence(
-      ['sass', 'html', 'fonts', 'copyImages', 'copyConfig', 'scripts'],
+      ['sass', 'html', 'fonts', 'copyCustomFonts', 'copyImages', 'copyConfig', 'scripts'],
       function(){
         buildBrowserify({
           minify: isRelease,
@@ -74,6 +74,10 @@ gulp.task('copyImages', function() {
 gulp.task('copyConfig', function() {
   return gulp.src('config/**/*.json')
       .pipe(gulp.dest('www/build/config'));
+});
+gulp.task('copyCustomFonts', function() {
+    return gulp.src('fonts/**/*.woff')
+        .pipe(gulp.dest('www/build/fonts'));
 });
 gulp.task('clean', function(){
   return del('www/build');

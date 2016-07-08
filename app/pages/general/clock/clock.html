@@ -1,12 +1,15 @@
-<hud></hud>
+<hud [playerData]="playerData" [showNextEx]="true" (nextEx)="nextExercise()"></hud>
 
 <ion-content [ngClass]="{day: background === 0, night: background === 1}" padding class="clock">
     <div>
         <div class="clock-frame">
-            <img class="clock-background" src="build/images/time/clock-background-{{level}}.png">
-            <img class="clock-hour" src="build/images/time/hour-handle.png" style="transform: rotate({{hourRotation}}deg);">
-            <img class="clock-minute" src="build/images/time/minute-handle.png" style="transform: rotate({{minuteRotation}}deg);">
+            <img class="clock-background" src="build/images/time/clock-background-{{playerData.level}}.png">
+            <img class="clock-hour" src="build/images/time/hour-handle.png" [ngStyle]="{transform: 'rotate('+hourRotation+'deg)'}">
+            <img class="clock-minute" src="build/images/time/minute-handle.png" [ngStyle]="{transform: 'rotate('+minuteRotation+'deg)'}">
         </div>
 
+        <div class="suggestions">
+
+        </div>
     </div>
 </ion-content>

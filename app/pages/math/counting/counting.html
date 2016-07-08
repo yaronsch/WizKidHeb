@@ -1,4 +1,4 @@
-<hud></hud>
+<hud [showNextEx]="true" (nextEx)="nextExercise()"></hud>
 
 <ion-content padding class="counting">
     <div *ngIf="matrix" class="wrapper">
@@ -15,10 +15,6 @@
                 <number *ngFor="let s of suggestions | shuffle" [value]="s"
                         (click)="numberClicked($event, s)" [theme]="'blackboard'" [frame]="true"></number>
             </div>
-        </div>
-
-        <div class="buttons">
-            <button (click)="nextExercise()">התרגיל הבא</button>
         </div>
     </div>
 

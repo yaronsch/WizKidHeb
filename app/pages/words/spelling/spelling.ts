@@ -15,7 +15,7 @@ const LEVELS_THRESHOLDS = [25, 50];
     templateUrl: 'build/pages/words/spelling/spelling.html',
     directives: [Letter, Hud],
     pipes: [TextDirection, ShuffleArray],
-    providers: [PlayerDataService]
+    providers: []
 })
 export class SpellingPage {
 

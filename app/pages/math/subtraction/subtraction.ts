@@ -1,4 +1,4 @@
-import {Page, NavController} from 'ionic-angular';
+import {Page} from 'ionic-angular';
 import {Letter} from "../../../components/letter/letter";
 import {ShuffleArray} from "../../../pipes/shuffle";
 import {Number} from "../../../components/number/number";
@@ -22,7 +22,7 @@ export class SubtractionPage {
     exNumbers: any = {a: 0, b: 0};
     suggestions: string[];
 
-    constructor(private dataService: StaticDataService, private nav: NavController) {
+    constructor(private dataService: StaticDataService) {
         this.gameData = dataService.data.menu[1].games[0];
         this.nextExercise();
     }

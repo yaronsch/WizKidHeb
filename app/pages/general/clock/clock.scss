@@ -1,3 +1,9 @@
+@font-face {
+    src: url("../fonts/noot-aj.woff");
+    font-family: nootregular;
+}
+
+
 @media screen and (min-aspect-ratio: 4/3)  and (orientation: landscape) {
     ion-content.clock {
         &.day {
@@ -14,6 +20,10 @@
 
         scroll-content {
             overflow: hidden;
+        }
+
+        .test {
+            font-family: nootregular;
         }
 
     }
