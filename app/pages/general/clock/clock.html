@@ -1,6 +1,6 @@
 <hud [playerData]="playerData" [showNextEx]="true" (nextEx)="nextExercise()"></hud>
 
-<ion-content [ngClass]="{day: background === 0, night: background === 1}" padding class="clock">
+<ion-content [ngClass]="{day: dayBG, night: !dayBG}" padding class="clock">
     <div>
         <div class="clock-frame">
             <img class="clock-background" src="build/images/time/clock-background-{{playerData.level}}.png">
@@ -9,7 +9,7 @@
         </div>
 
         <div class="suggestions">
-
+            <span class="suggestion" *ngFor="let suggestion of suggestions | shuffle" (click)="hourClicked($event, suggestion)">{{suggestion}}</span>
         </div>
     </div>
 </ion-content>

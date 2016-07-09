@@ -1,3 +1,4 @@
+$clock-red: #f16055;
 @font-face {
     src: url("../fonts/noot-aj.woff");
     font-family: nootregular;
@@ -16,28 +17,46 @@
             background-size: cover;
         }
 
-
-
         scroll-content {
             overflow: hidden;
         }
 
-        .test {
+        .suggestions {
+            position: absolute;
+            bottom: 30%;
+            width: 72%;
+            left: 14%;
             font-family: nootregular;
+            color: $clock-red;
+
+            .suggestion {
+                display: inline-block;
+                font-size: 32px;
+                margin: 0 1%;
+                width: 23%;
+                height: 50px;
+                line-height: 55px;
+                text-align: center;
+                vertical-align: text-top;
+                border: 2px solid;
+                transition: background 0.2s;
+
+                &:active {
+                    background: rgba(241, 96, 85, 0.3);
+
+                }
+            }
+
         }
 
-    }
-
-    .clock {
         .clock-frame {
-            width: 300px;
-            height: 300px;
-            margin-left: calc(50% - 150px);
+            width: 30%;
+            margin-left: 35%;
 
             img {
                 position: absolute;
-                width: 300px;
-                top: 100px;
+                width: 30%;
+                top: 10%;
                 -webkit-transition: transform 1s;
                 -moz-transition: transform 1s;
                 -ms-transition: transform 1s;
@@ -46,6 +65,7 @@
             }
         }
     }
+
 }
 
 @media screen and (min-aspect-ratio: 16/10) and (orientation: landscape) {
@@ -63,9 +83,50 @@
         scroll-content {
             overflow: hidden;
         }
+
+        .suggestions {
+            position: absolute;
+            top: 480px;
+            width: 72%;
+            left: 14%;
+            font-family: nootregular;
+            color: $clock-red;
+
+            .suggestion {
+                display: inline-block;
+                font-size: 22px;
+                margin: 0 1%;
+                width: 23%;
+                height: 40px;
+                line-height: 45px;
+                text-align: center;
+                vertical-align: text-top;
+                border: 2px solid;
+                transition: background 0.2s;
+
+                &:active {
+                    background: rgba(241, 96, 85, 0.3);
+
+                }
+            }
+
+        }
+
+        .clock-frame {
+            width: 22%;
+            margin-left: 39%;
+
+            img {
+                position: absolute;
+                width: 22%;
+                top: 10%;
+                -webkit-transition: transform 1s;
+                -moz-transition: transform 1s;
+                -ms-transition: transform 1s;
+                -o-transition: transform 1s;
+                transition: transform 1s;
+            }
+        }
     }
 
-    .clock {
-
-    }
 }

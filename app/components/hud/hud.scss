@@ -33,6 +33,7 @@ ion-page {
                 ion-select {
                     padding: 0;
                     color: $frame-orange;
+                    min-width: 45px;
                 }
             }
         }
