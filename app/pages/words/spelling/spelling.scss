@@ -47,7 +47,7 @@ $frame-orange: #F58538;
                 .letter {
                     width: 12%;
                     display: inline-block;
-                    margin: 0 2px;
+                    margin: 0;
                 }
             }
         }
@@ -59,6 +59,7 @@ $frame-orange: #F58538;
                 text-align: center;
 
                 letter {
+
                     .letter {
                         width: 6%;
                         display: inline-block;
@@ -66,6 +67,10 @@ $frame-orange: #F58538;
                         background-image: url("../images/themes/notebook/letters/frame.png");
                         background-repeat: no-repeat;
                         background-size: contain;
+                        &:active {
+                            background-color: rgba(248, 185, 82, 0.3);
+                        }
+                        transition: background-color 0.2s;
                     }
 
                     &.used {
@@ -136,6 +141,10 @@ $frame-orange: #F58538;
                         background-image: url("../images/themes/notebook/letters/frame.png");
                         background-size: contain;
                         background-repeat: no-repeat;
+                        &:active {
+                            background-color: rgba(248, 185, 82, 0.3);
+                        }
+                        transition: background-color 0.2s;
                     }
 
                     &.used {

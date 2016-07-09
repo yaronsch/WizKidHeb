@@ -95,10 +95,17 @@
                         width: 6%;
                         display: inline-block;
                         margin: 4px 1%;
+                        &:active {
+                            .frame {
+                                background: rgba(245, 133, 56, 0.3);
+                            }
+                        }
+
 
                         .frame {
                             width: 100%;
                             margin-bottom: -106%;
+                            transition: background 0.2s;
                         }
 
                         &.double-digit {
@@ -214,10 +221,16 @@
                         width: 6%;
                         display: inline-block;
                         margin: 4px 1%;
+                        &:active {
+                            .frame {
+                                background: rgba(245, 133, 56, 0.3);
+                            }
+                        }
 
                         .frame {
                             width: 100%;
                             margin-bottom: -108%;
+                            transition: background 0.2s;
                         }
 
                         &.double-digit {
