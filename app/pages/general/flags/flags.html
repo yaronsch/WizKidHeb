@@ -5,5 +5,12 @@
         <div class="image">
             <img src="build/{{country.image}}">
         </div>
+        <div class="suggestions">
+            <div class="suggestion" *ngFor="let suggestion of suggestions | shuffle" (click)="itemClicked(suggestion)"
+                [ngClass]="{used: suggestion.used}">
+                <span class="text">{{suggestion.name}}</span>
+                <span class="image-small" *ngIf="suggestion.used"><img src="build/{{suggestion.image}}"></span>
+            </div>
+        </div>
     </div>
 </ion-content>
