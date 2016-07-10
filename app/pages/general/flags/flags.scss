@@ -1,0 +1,32 @@
+@font-face {
+    src: url("../fonts/noot-aj.woff");
+    font-family: nootregular;
+}
+
+@media screen and (min-aspect-ratio: 4/3)  and (orientation: landscape) {
+    ion-content.flags {
+        background: url("../images/themes/flags/flag-background.png");
+        background-size: cover;
+
+        .image {
+            width: 36%;
+            margin: 100px 32%;
+        }
+
+        scroll-content {
+            overflow: hidden;
+        }
+
+    }
+}
+
+@media screen and (min-aspect-ratio: 16/10) and (orientation: landscape) {
+    ion-content.flags {
+        background: url("../images/themes/flags/flag-background-phone.png");
+        background-size: cover;
+
+        scroll-content {
+            overflow: hidden;
+        }
+    }
+}

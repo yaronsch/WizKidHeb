@@ -5,7 +5,7 @@
         <div class="count-items">
             <div class="count-row" *ngFor="let row of matrix; let i = index">
                 <span class="count-cell" *ngFor="let column of row; let j = index">
-                    <img *ngIf="matrix[i][j]" src="build/images/{{picture}}.png">
+                    <img *ngIf="matrix[i][j]" src="build/images/sketched/{{picture}}.png">
                 </span>
             </div>
         </div >

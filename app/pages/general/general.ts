@@ -2,6 +2,7 @@ import {Page, NavController} from 'ionic-angular';
 import {ClockPage} from "./clock/clock";
 import {Hud} from "../../components/hud/hud";
 import {StaticDataService} from "../../services/static-data-service";
+import {FlagsPage} from "./flags/flags";
 
 
 @Page({
@@ -19,6 +20,9 @@ export class GeneralKnowledgePage {
         switch (game.id) {
             case 1:
                 this.nav.push(ClockPage);
+                break;
+            case 2:
+                this.nav.push(FlagsPage);
                 break;
 
         }

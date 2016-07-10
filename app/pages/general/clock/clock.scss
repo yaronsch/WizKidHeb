@@ -86,7 +86,7 @@ $clock-red: #f16055;
 
         .suggestions {
             position: absolute;
-            top: 480px;
+            bottom: 30%;
             width: 72%;
             left: 14%;
             font-family: nootregular;
@@ -95,8 +95,8 @@ $clock-red: #f16055;
             .suggestion {
                 display: inline-block;
                 font-size: 22px;
-                margin: 0 1%;
-                width: 23%;
+                margin: 0 2%;
+                width: 21%;
                 height: 40px;
                 line-height: 45px;
                 text-align: center;
@@ -109,7 +109,6 @@ $clock-red: #f16055;
 
                 }
             }
-
         }
 
         .clock-frame {
