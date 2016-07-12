@@ -18,7 +18,7 @@ const MINUTE_RESOLUTIONS = [30, 15, 5];
 })
 export class ClockPage {
     gameData: any;
-    dayBG: boolean;
+    scene: string = 'day';
     time: number[] = [0, 0];
     timeStr: string = '12:00';
     suggestions: string[];
@@ -32,8 +32,11 @@ export class ClockPage {
     }
     
     nextExercise() {
-        this.dayBG = Math.random() > 0.5;        
-        this.time = this.generateTime();
+        this.scene = Math.random() > 0.5 ? 'day' : 'night';        
+        let time = this.generateTime();
+        while (time[0] === this.time[0] && time[1] === this.time[1]) {
+            time = this.generateTime();
+        }
         this.timeStr = ClockPage.timeToString(this.time);
         this.calcRotation();
         this.generateSuggestions();     

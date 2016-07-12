@@ -1,9 +1,9 @@
 <hud [playerData]="playerData" [showNextEx]="true" (nextEx)="nextExercise()"></hud>
 
-<ion-content [ngClass]="{day: dayBG, night: !dayBG}" padding class="clock">
+<ion-content [ngClass]="{day: scene === 'day', night: scene === 'night'}" padding class="clock">
     <div>
         <div class="clock-frame">
-            <img class="clock-background" src="build/images/time/clock-background-{{playerData.level}}.png">
+            <img class="clock-background" src="build/images/time/clock-background-{{scene}}-{{playerData.level}}.png">
             <img class="clock-hour" src="build/images/time/hour-handle.png" [ngStyle]="{transform: 'rotate('+hourRotation+'deg)'}">
             <img class="clock-minute" src="build/images/time/minute-handle.png" [ngStyle]="{transform: 'rotate('+minuteRotation+'deg)'}">
         </div>
